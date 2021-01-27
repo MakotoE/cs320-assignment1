@@ -28,6 +28,7 @@ public class RouteFinder_test {
 				"230", "/schedules/route/230"
 			));
 			Assert.assertEquals(expectedArlington, result.get("Arlington"));
+			Assert.assertFalse(result.get("Bellevue").isEmpty());
 		}
 	}
 

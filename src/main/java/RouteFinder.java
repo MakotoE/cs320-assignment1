@@ -1,15 +1,45 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class RouteFinder implements IRouteFinder {
 	@Override
 	public Map<String, Map<String, String>> getBusRoutesUrls(char destInitial) {
-		return null;
+		String page = null;
+		try {
+			page = readHTTP(new URL(TRANSIT_WEB_URL));
+		} catch (IOException e) {
+			System.err.println(e.getMessage());
+			System.exit(1);
+		}
+
+		return allRoutes(page).entrySet().stream().filter((entry) -> {
+			return entry.getKey().toLowerCase().startsWith(String.valueOf(destInitial).toLowerCase());
+		}).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 	}
 
 	@Override
 	public Map<String, LinkedHashMap<Integer, String>> getRouteStops(String url) {
 		return null;
+	}
+
+	static String readHTTP(URL url) throws IOException {
+		var connection = url.openConnection();
+		connection.setRequestProperty("user-Agent", "Mozilla/5.0");
+		var streamReader = new InputStreamReader(
+			connection.getInputStream(),
+			StandardCharsets.UTF_8
+		);
+		try (var reader = new BufferedReader(streamReader)) {
+			return reader
+				.lines()
+				.collect(Collectors.joining("\n"));
+		}
 	}
 
 	static final Pattern destinationSectionPattern = Pattern.compile("<hr id=\"[^\"]*\" ?/?>");
@@ -27,7 +57,7 @@ public class RouteFinder implements IRouteFinder {
 		<h3>Arlington</h3>
 		<div class="row Community">
 		  <div class="col-xs-3 text-nowrap">
-			<strong><a href="/schedules/route/201-202">201/202</a></strong>
+			<strong><a href="/schedules/route/201-202" ...>201/202</a></strong>
 		  </div>
 		  ...
 		</div>
@@ -68,8 +98,8 @@ public class RouteFinder implements IRouteFinder {
 		return Optional.of(matcher.group());
 	}
 
-	static final Pattern routeDelimiterPattern = Pattern.compile("<div class=\"row Community\">");
-	static final Pattern urlPattern = Pattern.compile("(?<=<strong><a href=\").*?(?=\">)");
+	static final Pattern routeDelimiterPattern = Pattern.compile("<div class=\"row Community");
+	static final Pattern urlPattern = Pattern.compile("(?<=<strong><a href=\").*?(?=\")");
 	static final Pattern routePattern = Pattern.compile("(?<=>).*?(?=</a>)");
 
 	/**
