@@ -1,0 +1,2716 @@
+ <sf:ResourceLinks id="ResourceLinks" runat="server"> <sf:ResourceFile JavaScriptLibrary="JQuery"></sf:ResourceFile> </sf:ResourceLinks> <!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Google Tag Manager --> <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJ4BGTH');</script> <!-- End Google Tag Manager --> <title>
+	Bus Schedules &amp; Route Maps | Community Transit
+</title> <link href="/ResourcePackages/Bootstrap/assets/dist/css/main.min.css" rel="stylesheet" type="text/css" /><link href="/Frontend-Assembly/SitefinityWebApp/Mvc/StyleSheets/SiteAlerts/site_alerts.css?package=Bootstrap" rel="stylesheet" type="text/css" /><link href="/Frontend-Assembly/Telerik.Sitefinity.Frontend.Navigation/assets/dist/css/mobileNavStyles.css?package=Bootstrap" rel="stylesheet" type="text/css" /><link href="/Frontend-Assembly/SitefinityWebApp/Mvc/StyleSheets/SidebarAccordion/sidebar_accordion.css?package=Bootstrap" rel="stylesheet" type="text/css" /><link href="/Frontend-Assembly/SitefinityWebApp/Mvc/StyleSheets/Schedules/schedules.css?package=Bootstrap" rel="stylesheet" type="text/css" /> <script type="text/javascript">var sf_appPath='/';</script><link href="/ResourcePackages/Bootstrap/assets/dist/css/customizations.css?v=5" media="all" rel="stylesheet" type="text/css" /><link href="/ResourcePackages/Bootstrap/assets/dist/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css" /><link href="/ResourcePackages/Bootstrap/assets/dist/css/icomoon.css" media="all" rel="stylesheet" type="text/css" /><link href="/ResourcePackages/Bootstrap/assets/dist/css/jasny-bootstrap.min.css" media="all" rel="stylesheet" type="text/css" /><link href="/ResourcePackages/Bootstrap/assets/dist/css/jquery-ui.min.css" media="all" rel="stylesheet" type="text/css" /><script type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJ4BGTH');
+</script><style type="text/css" media="all">.async-hide { opacity: 0 !important};</style><script type="text/javascript">
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KGQ2QXF':true});
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1230026-1', 'auto');
+  ga('require', 'GTM-KGQ2QXF');
+  ga('send', 'pageview');
+</script><meta name="Generator" content="Sitefinity 12.2.7232.0 PE" /><link rel="canonical" href="https://www.communitytransit.org/busservice/schedules" /><meta name="description" content="A comprehensive list of schedules for all Community Transit routes, sorted by community or route number." /></head> <body> <!-- Google Tag Manager (noscript) --> <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ4BGTH"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <!-- End Google Tag Manager (noscript) --> <script src="/ScriptResource.axd?d=4bMApOb58R6igmkUEZ0eXjoNiOpgnjqMYREqvZCH1_r_7yHu0jHQhjjMJj7uHfS8jaa6piVH_o_eFZRSg3aiTz3iVJlwz488tBrcgH0eppYx9q-tey4AZlyFXX20JAMIdmeCDweHMEn2yWruah2ED8VhuR_yrOqdyj_gqOgSAQzNqU2uVkewy3cX7EgkZ1zx0&amp;t=1f7ae5e" type="text/javascript"></script><script src="/ScriptResource.axd?d=EydukmxBmDstn7gSYzQESNa3qbby3JYWI_eXWDLwxWuaYfDJP9R6fpOZfUm1h_sOCVaz5o6SyiXPtF8C6rjkz29e1AgAc9vOs8E2Z-XaEhLiyoTJ2_3t5-rq18YkuUpF2G6wwCcNQ1bKsXBI4Ny7KpN1TmM8FGh8Jx5_v5kI1SBWkggSuwDPc57APd_dbQ_o0&amp;t=1f7ae5e" type="text/javascript"></script><script src="/ScriptResource.axd?d=VKaJmfFWDpQxp1_HxsR1qKHCAlfbgQOKrx7_xq74HfXUX2lLpMef8M4RMpXjS6giR4EsVigJCuiSiU6_992A1dNzaW_3aRak7SGi02Bv9_axt8PWFXiE3jbg8libaWw6d8zMaPIMjk64ffxfc34Q72B0SDs9-On3SgUDpTUXwM443Ref5ZQi3y4rAZ56hZ_UIZbkwcs7tbRxkxwM7Xf6Bg2&amp;t=1f7ae5e" type="text/javascript"></script> <div> 
+
+            <div class="alerts-block Caution" id="divAlertsBlock1">
+                <div class="toggle-button"><a href="#">Collapse</a></div>
+                <div class="alerts-text-area">
+                    <div class="title">Safe and Healthy Tips for Riding Transit</div>
+                    <div class="body"><a href="https://www.communitytransit.org/coronavirus" target="_blank">Here's what we're doing</a> to help keep our customers and employees healthy and safe.</div>
+                </div>
+            </div>
+
+
+
+
+<div id="Contentplaceholder1_T45907BB6047_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row visible-lg-block printHide" data-sf-element="Row">
+    <div id="Contentplaceholder1_T45907BB6072_Col00" class="sf_colsIn col-lg-4" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sf-Long-text" ><section id="logo"><a href="/"><img alt="Community Transit" class="logo img-responsive" src="/images/default-source/default-album/primarylogo.png" width="275px" /></a>					<div class="clearfix hidden-lg"></div></section></div>    
+</div>
+    </div>
+    <div id="Contentplaceholder1_T45907BB6072_Col01" class="sf_colsIn col-md-12 col-lg-8" data-sf-element="Column 2" data-placeholder-label="Column 2">
+
+
+<div class="form-inline" id="search">
+    <div class="form-group pull-right">
+        <input type="search" title="Search input" placeholder="Search" id="00e66fc5-c769-4a15-add0-539c14916976" class="form-control" value=""/>
+		<button type="button" class="btn btn-default" id="047f0962-7369-4401-992f-b6b8cac68b25">GO</button>
+	</div>
+	<input type="hidden" data-sf-role="resultsUrl" value="/search" />
+    <input type="hidden" data-sf-role="indexCatalogue" value="everything" />
+    <input type="hidden" data-sf-role="wordsMode" value="AllWords" />
+    <input type="hidden" data-sf-role="disableSuggestions" value='false' />
+    <input type="hidden" data-sf-role="minSuggestionLength" value="100" />
+    <input type="hidden" data-sf-role="suggestionFields" value="Title,Content" />
+    <input type="hidden" data-sf-role="language" value="" />
+    <input type="hidden" data-sf-role="suggestionsRoute" value="/restapi/search/suggestions" />
+    <input type="hidden" data-sf-role="searchTextBoxId" value='#00e66fc5-c769-4a15-add0-539c14916976' />
+    <input type="hidden" data-sf-role="searchButtonId" value='#047f0962-7369-4401-992f-b6b8cac68b25' />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<nav id="desktop" role="navigation">
+    
+	<ul class="nav nav-pills">
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle hotjar-trigger" accesskey="8" data-hotjar-trigger-name="navigation_swift_drop_down">
+                Swift
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu ">
+                            <li class="">
+                <a href="/aboutswift" target="_self">About Swift</a>
+            </li>
+            <li class="">
+                <a href="/swiftblue" target="_self">Swift Blue Line</a>
+            </li>
+            <li class="">
+                <a href="/swiftblue2024" target="_self">Swift Blue Line 2024</a>
+            </li>
+            <li class="">
+                <a href="/swiftgreen" target="_self">Swift Green Line</a>
+            </li>
+            <li class="">
+                <a href="/swiftorange2024" target="_self">Swift Orange Line (2024)</a>
+            </li>
+            <li class="">
+                <a href="/swift/how-to-ride-swift" target="_self">How to Ride Swift</a>
+            </li>
+            <li class="">
+                <a href="/swifttickets" target="_self">Swift Fares: How to Pay</a>
+            </li>
+
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle hotjar-trigger" accesskey="1" data-hotjar-trigger-name="navigation_bus_service_drop_down">
+                Bus Service
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu ">
+                            <li class="">
+                <a href="/newstopnames" target="_self">Stop Name Look-Up Table</a>
+            </li>
+            <li class="">
+                <a href="/foodbanks" target="_self">Bus Service to Food Banks in Snohomish County</a>
+            </li>
+            <li class="">
+                <a href="/dart" target="_self">DART Paratransit</a>
+            </li>
+            <li class="">
+                <a href="/busplus" target="_self">Bus Plus (PDF)</a>
+            </li>
+             <li class="dropdown-submenu">
+                <a href="/busservice/busfinder" target="_self">BusFinder - Find My Bus in Real-Time 
+                    <span class="right-caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                                <li class="">
+                <a href="/busservice/busfinder/about-busfinder" target="_self">About BusFinder</a>
+            </li>
+            <li class="">
+                <a href="/busfindertips" target="_self">BusFinder Tips</a>
+            </li>
+
+                </ul>
+            </li>
+             <li class="dropdown-submenu">
+                <a href="/busservice/tripplanner" target="_self">Trip Planner
+                    <span class="right-caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                                <li class="">
+                <a href="/busservice/tripplanner/nearest-stop" target="_self">Nearest Bus Stop</a>
+            </li>
+            <li class="">
+                <a href="/busservice/tripplanner/nearby-service" target="_self">Nearby Bus Service</a>
+            </li>
+            <li class="">
+                <a href="/busservice/tripplanner/trip-planner-feedback" target="_self">Trip Planner Feedback</a>
+            </li>
+
+                </ul>
+            </li>
+             <li class="dropdown-submenu">
+                <a href="/busservice/schedules" target="_self">Schedules
+                    <span class="right-caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                                <li class="">
+                <a href="/busservice/schedules/stop-list" target="_self">Bus Stop List</a>
+            </li>
+            <li class="">
+                <a href="/snowroutes" target="_self">Snow Routes</a>
+            </li>
+
+                </ul>
+            </li>
+             <li class="dropdown-submenu">
+                <a href="/busservice/snow" target="_self">Snow Service
+                    <span class="right-caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                                <li class="">
+                <a href="/busservice/snow/snow-routes" target="_self">Snow Routes</a>
+            </li>
+            <li class="">
+                <a href="/snow" target="_self">Bus Service in the Snow</a>
+            </li>
+
+                </ul>
+            </li>
+             <li class="dropdown-submenu">
+                <a href="/howtoride" target="_self">How to Ride
+                    <span class="right-caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                                <li class="">
+                <a href="/howtoride/rules-and-policies" target="_self">Rules and Policies</a>
+            </li>
+            <li class="">
+                <a href="/howtoride/safety-and-security" target="_self">Safety and Security</a>
+            </li>
+            <li class="">
+                <a href="/howtoride/translation-services" target="_self">Translation Services</a>
+            </li>
+
+                </ul>
+            </li>
+             <li class="dropdown-submenu">
+                <a href="/busservice/doubletall" target="_self">Double Tall Buses
+                    <span class="right-caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                                <li class="">
+                <a href="/busservice/doubletall/find-a-double-tall" target="_self">Find a Double Tall</a>
+            </li>
+
+                </ul>
+            </li>
+            <li class="">
+                <a href="/busservice/system-maps" target="_self">System Maps</a>
+            </li>
+            <li class="">
+                <a href="/busservice/lost-and-found" target="_self">Lost and Found</a>
+            </li>
+            <li class="">
+                <a href="/busservice/ridestore" target="_self">RideStore</a>
+            </li>
+            <li class="">
+                <a href="/busservice/transit-centers-and-parking" target="_self">Transit Centers and Parking</a>
+            </li>
+            <li class="">
+                <a href="/accessibility" target="_self">Accessibility</a>
+            </li>
+            <li class="">
+                <a href="/busservice/bikes" target="_self">Bikes</a>
+            </li>
+            <li class="">
+                <a href="/busservice/boeing" target="_self">Going to Boeing</a>
+            </li>
+            <li class="">
+                <a href="/busservice/bus-to-the-library" target="_self">Bus to the Library</a>
+            </li>
+            <li class="">
+                <a href="/holidays" target="_self">Holiday Schedule</a>
+            </li>
+            <li class="">
+                <a href="/busservice/frequentlyaskedquestions" target="_self">Frequently Asked Questions</a>
+            </li>
+            <li class="">
+                <a href="/busservice/king-county-metro-stops" target="_self">King County Metro Stops</a>
+            </li>
+            <li class="">
+                <a href="/servicedisruption" target="_self">Seattle-Everett Service Disruption</a>
+            </li>
+
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle hotjar-trigger" accesskey="2" data-hotjar-trigger-name="navigation_fares_drop_down">
+                Fares
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu ">
+                            <li class="">
+                <a href="/fares/fares-and-passes" target="_self">Fares and Passes</a>
+            </li>
+            <li class="">
+                <a href="/fares/monthlypasses" target="_self">Monthly Passes</a>
+            </li>
+            <li class="">
+                <a href="/orcalift" target="_self">ORCA LIFT</a>
+            </li>
+            <li class="">
+                <a href="/dartpassandtickets" target="_self">DART Passes &amp; Tickets</a>
+            </li>
+            <li class="">
+                <a href="/dartstore" target="_self">DART Store</a>
+            </li>
+            <li class="">
+                <a href="/fares/smartcard" target="_self">ORCA Smart Card</a>
+            </li>
+            <li class="">
+                <a href="/orcaoutlets" target="_self">ORCA Outlets</a>
+            </li>
+            <li class="">
+                <a href="/fares/reduced-fare-permit" target="_self">Reduced Fare Permit</a>
+            </li>
+            <li class="">
+                <a href="/fares/who-takes-my-pass-or-ticket" target="_self">Who Takes My Pass or Ticket?</a>
+            </li>
+
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle hotjar-trigger" accesskey="3" data-hotjar-trigger-name="navigation_vanpool_drop_down">
+                Vanpool
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu ">
+                            <li class="">
+                <a href="/vanpool/about" target="_self">About Vanpool</a>
+            </li>
+            <li class="">
+                <a href="/vanpool/find" target="_self">Find a Vanpool to Join</a>
+            </li>
+            <li class="">
+                <a href="/vanpool/start" target="_self">Start a New Vanpool</a>
+            </li>
+            <li class="">
+                <a href="/vanpool/resources" target="_self">Current Vanpool Resources</a>
+            </li>
+            <li class="">
+                <a href="/vanpool/pay-fare" target="_self">Pay Your Vanpool Fare</a>
+            </li>
+
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle hotjar-trigger" accesskey="4" data-hotjar-trigger-name="navigation_programs_drop_down">
+                Programs
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu ">
+                            <li class="">
+                <a href="/programs/commutetripreduction" target="_self">Commute Trip Reduction</a>
+            </li>
+            <li class="">
+                <a href="/programs/transit-instruction" target="_self">Travel Training Program</a>
+            </li>
+            <li class="">
+                <a href="/title6" target="_self">Title VI Program</a>
+            </li>
+            <li class="">
+                <a href="/programs/van-go" target="_self">Van GO</a>
+            </li>
+            <li class="">
+                <a href="/programs/vanpool-for-business" target="_self">Vanpool for Business</a>
+            </li>
+
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle hotjar-trigger" accesskey="8" data-hotjar-trigger-name="navigation_jobs_drop_down">
+                Jobs
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu ">
+                            <li class="">
+                <a href="/employment/opportunities" target="_self">Employment</a>
+            </li>
+             <li class="dropdown-submenu">
+                <a href="/drive4us" target="_self">Bus Drivers
+                    <span class="right-caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                                <li class="">
+                <a href="/drive4us/drive-4-us" target="_self">Drive 4 Us</a>
+            </li>
+            <li class="">
+                <a href="/drive4us/benefits" target="_self">Benefits</a>
+            </li>
+            <li class="">
+                <a href="/drive4us/interview" target="_self">Interview</a>
+            </li>
+            <li class="">
+                <a href="/drive4us/getting-a-cdl" target="_self">Getting a CDL</a>
+            </li>
+            <li class="">
+                <a href="/drive4us/training" target="_self">Training</a>
+            </li>
+            <li class="">
+                <a href="/drive4us/driving-record" target="_self">Driving Record</a>
+            </li>
+            <li class="">
+                <a href="/drive4us/applicant-tips-and-faqs" target="_self">Applicant Tips and FAQs</a>
+            </li>
+            <li class="">
+                <a href="/drive4us/on-the-job" target="_self">On the Job</a>
+            </li>
+
+                </ul>
+            </li>
+            <li class="">
+                <a href="/employment/diesel-mechanics" target="_self">Diesel Mechanics</a>
+            </li>
+            <li class="">
+                <a href="/employment/jobopportunities" target="_blank">Job Opportunities</a>
+            </li>
+
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle hotjar-trigger" accesskey="7" data-hotjar-trigger-name="navigation_about_drop_down">
+                About
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu pull-right">
+                             <li class="dropdown-submenu">
+                <a href="/news" target="_self">News
+                    <span class="right-caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                                <li class="">
+                <a href="/news/news-releases" target="_self">News Releases</a>
+            </li>
+            <li class="">
+                <a href="/alert" target="_self">Rider Alerts</a>
+            </li>
+            <li class="">
+                <a href="/swiftnews" target="_self">Swift Network News</a>
+            </li>
+            <li class="">
+                <a href="/therouteahead" target="_self">The Route Ahead</a>
+            </li>
+            <li class="">
+                <a href="/news/events" target="_self">Events</a>
+            </li>
+            <li class="">
+                <a href="/news/subscribetoalerts" target="_blank">Subscribe</a>
+            </li>
+            <li class="">
+                <a href="/ctlive" target="_self">Community Transit Live</a>
+            </li>
+
+                </ul>
+            </li>
+            <li class="">
+                <a href="/mission" target="_self">Mission, Vision, Core Values</a>
+            </li>
+             <li class="dropdown-submenu">
+                <a href="/about/projects" target="_self">Projects
+                    <span class="right-caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                                <li class="">
+                <a href="/TDP" target="_self">Transit Development Plan </a>
+            </li>
+            <li class="">
+                <a href="/linkconstruction" target="_self">Link Light Rail Construction</a>
+            </li>
+            <li class="">
+                <a href="/longrangeplan" target="_self">Long Range Plan</a>
+            </li>
+            <li class="">
+                <a href="/northgate" target="_self">Northgate Link Light Rail Connections</a>
+            </li>
+            <li class="">
+                <a href="/swiftorange" target="_self">Swift Orange Line</a>
+            </li>
+            <li class="">
+                <a href="/kpcrSEPA" target="_self">KPCR Renovation SEPA</a>
+            </li>
+
+                </ul>
+            </li>
+            <li class="">
+                <a href="/meetings" target="_self">Meetings</a>
+            </li>
+            <li class="">
+                <a href="/about/about-us" target="_self">Agency Profile</a>
+            </li>
+            <li class="">
+                <a href="/budget" target="_self">Budget &amp; Financial Information</a>
+            </li>
+            <li class="">
+                <a href="/about/directions" target="_self">Directions</a>
+            </li>
+            <li class="">
+                <a href="/boardofdirectorsceo" target="_self">Board of Directors &amp; CEO</a>
+            </li>
+            <li class="">
+                <a href="/about/contact-us" target="_self">Contact Us</a>
+            </li>
+            <li class="">
+                <a href="/about/customer-comments" target="_self">Customer Comments</a>
+            </li>
+            <li class="">
+                <a href="/about/procurement" target="_self">Procurement</a>
+            </li>
+            <li class="">
+                <a href="/about/nondiscrimination" target="_self">Nondiscrimination</a>
+            </li>
+            <li class="">
+                <a href="/environment" target="_self">Environmental Commitment</a>
+            </li>
+            <li class="">
+                <a href="/commitments" target="_self">Health &amp; Safety Commitments</a>
+            </li>
+
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+    </div>
+</div>
+<div class="row mobileRow navbar-fixed-top hidden-lg" data-sf-element="Row">
+    <div id="Contentplaceholder1_T45907BB6071_Col00" class="sf_colsIn col-md-12" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sf-Long-text" ><section id="mobileNavTrigger"><div class="mobileNavContainer"><a href="/"><img alt="Community Transit" src="/images/default-source/default-album/primarylogo.png" width="200px" /></a>						<button class="btn btn-default pull-right responsiveHamburger" data-autohide="false" data-canvas="body" data-target=".sidepocket" data-toggle="offcanvas" id="responsiveHamburgerPrimary" type="button"><span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger"></span></button></div></section><!-- END hamburger trigger for <LG --></div>    
+</div><div id="Contentplaceholder1_T45907BB6076_Col00" class="sf_colsIn navmenu navmenu-default navmenu-fixed-right sidepocket offcanvas text-center" data-sf-element="Container" data-placeholder-label="Container">
+
+
+<div class="form-inline">
+    <div class="form-group">
+	    <button class="btn btn-default pull-right responsiveHamburger" data-canvas="body" data-target=".sidepocket" data-toggle="offcanvas" data-autohide="false" type="button" id="responsiveHamburgerSecondary"><span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger"></span></button>
+        <input type="search" title="Search input" placeholder="Search" id="0ba9e42c-341c-4d5c-9eda-5a88ab369881" class="form-control" value=""/>
+		<button type="button" class="btn btn-primary btn-block" id="73703604-5c4f-408a-9027-c391c23bd601">GO</button>
+	</div>
+	<input type="hidden" data-sf-role="resultsUrl" value="/search" />
+    <input type="hidden" data-sf-role="indexCatalogue" value="everything" />
+    <input type="hidden" data-sf-role="wordsMode" value="AllWords" />
+    <input type="hidden" data-sf-role="disableSuggestions" value='false' />
+    <input type="hidden" data-sf-role="minSuggestionLength" value="100" />
+    <input type="hidden" data-sf-role="suggestionFields" value="Title,Content" />
+    <input type="hidden" data-sf-role="language" value="" />
+    <input type="hidden" data-sf-role="suggestionsRoute" value="/restapi/search/suggestions" />
+    <input type="hidden" data-sf-role="searchTextBoxId" value='#0ba9e42c-341c-4d5c-9eda-5a88ab369881' />
+    <input type="hidden" data-sf-role="searchButtonId" value='#73703604-5c4f-408a-9027-c391c23bd601' />
+</div>
+
+
+
+
+
+
+<nav class="nav" id="mobileSidepocketNav" role="navigation">   
+    <ul class="nav__list">
+        <li>
+            <input id="group-1" type="checkbox" hidden />
+            <label for="group-1" class="hotjar-trigger" data-hotjar-trigger-name="navigation_swift_drop_down"><span class="fa fa-angle-right"></span> Swift</label>
+            <ul class="group-list">
+                            <li>
+                <a href="/aboutswift" target="_self">About Swift</a>
+            </li>
+            <li>
+                <a href="/swiftblue" target="_self">Swift Blue Line</a>
+            </li>
+            <li>
+                <a href="/swiftblue2024" target="_self">Swift Blue Line 2024</a>
+            </li>
+            <li>
+                <a href="/swiftgreen" target="_self">Swift Green Line</a>
+            </li>
+            <li>
+                <a href="/swiftorange2024" target="_self">Swift Orange Line (2024)</a>
+            </li>
+            <li>
+                <a href="/swift/how-to-ride-swift" target="_self">How to Ride Swift</a>
+            </li>
+            <li>
+                <a href="/swifttickets" target="_self">Swift Fares: How to Pay</a>
+            </li>
+
+            </ul>
+        </li>
+        <li>
+            <input id="group-2" type="checkbox" hidden />
+            <label for="group-2" class="hotjar-trigger" data-hotjar-trigger-name="navigation_bus_service_drop_down"><span class="fa fa-angle-right"></span> Bus Service</label>
+            <ul class="group-list">
+                            <li>
+                <a href="/newstopnames" target="_self">Stop Name Look-Up Table</a>
+            </li>
+            <li>
+                <a href="/foodbanks" target="_self">Bus Service to Food Banks in Snohomish County</a>
+            </li>
+            <li>
+                <a href="/dart" target="_self">DART Paratransit</a>
+            </li>
+            <li>
+                <a href="/busplus" target="_self">Bus Plus (PDF)</a>
+            </li>
+            <li>
+                <input id="sub-group-1" type="checkbox" hidden />
+                <label for="sub-group-1"><span class="fa fa-angle-right"></span> BusFinder - Find My Bus in Real-Time </label>
+                <ul class="sub-group-list">
+                                <li>
+                <a href="/busservice/busfinder/about-busfinder" target="_self">About BusFinder</a>
+            </li>
+            <li>
+                <a href="/busfindertips" target="_self">BusFinder Tips</a>
+            </li>
+
+                </ul>
+            </li>
+            <li>
+                <input id="sub-group-2" type="checkbox" hidden />
+                <label for="sub-group-2"><span class="fa fa-angle-right"></span> Trip Planner</label>
+                <ul class="sub-group-list">
+                                <li>
+                <a href="/busservice/tripplanner/nearest-stop" target="_self">Nearest Bus Stop</a>
+            </li>
+            <li>
+                <a href="/busservice/tripplanner/nearby-service" target="_self">Nearby Bus Service</a>
+            </li>
+            <li>
+                <a href="/busservice/tripplanner/trip-planner-feedback" target="_self">Trip Planner Feedback</a>
+            </li>
+
+                </ul>
+            </li>
+            <li>
+                <input id="sub-group-3" type="checkbox" hidden />
+                <label for="sub-group-3"><span class="fa fa-angle-right"></span> Schedules</label>
+                <ul class="sub-group-list">
+                                <li>
+                <a href="/busservice/schedules/stop-list" target="_self">Bus Stop List</a>
+            </li>
+            <li>
+                <a href="/snowroutes" target="_self">Snow Routes</a>
+            </li>
+
+                </ul>
+            </li>
+            <li>
+                <input id="sub-group-4" type="checkbox" hidden />
+                <label for="sub-group-4"><span class="fa fa-angle-right"></span> Snow Service</label>
+                <ul class="sub-group-list">
+                                <li>
+                <a href="/busservice/snow/snow-routes" target="_self">Snow Routes</a>
+            </li>
+            <li>
+                <a href="/snow" target="_self">Bus Service in the Snow</a>
+            </li>
+
+                </ul>
+            </li>
+            <li>
+                <input id="sub-group-5" type="checkbox" hidden />
+                <label for="sub-group-5"><span class="fa fa-angle-right"></span> How to Ride</label>
+                <ul class="sub-group-list">
+                                <li>
+                <a href="/howtoride/rules-and-policies" target="_self">Rules and Policies</a>
+            </li>
+            <li>
+                <a href="/howtoride/safety-and-security" target="_self">Safety and Security</a>
+            </li>
+            <li>
+                <a href="/howtoride/translation-services" target="_self">Translation Services</a>
+            </li>
+
+                </ul>
+            </li>
+            <li>
+                <input id="sub-group-6" type="checkbox" hidden />
+                <label for="sub-group-6"><span class="fa fa-angle-right"></span> Double Tall Buses</label>
+                <ul class="sub-group-list">
+                                <li>
+                <a href="/busservice/doubletall/find-a-double-tall" target="_self">Find a Double Tall</a>
+            </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="/busservice/system-maps" target="_self">System Maps</a>
+            </li>
+            <li>
+                <a href="/busservice/lost-and-found" target="_self">Lost and Found</a>
+            </li>
+            <li>
+                <a href="/busservice/ridestore" target="_self">RideStore</a>
+            </li>
+            <li>
+                <a href="/busservice/transit-centers-and-parking" target="_self">Transit Centers and Parking</a>
+            </li>
+            <li>
+                <a href="/accessibility" target="_self">Accessibility</a>
+            </li>
+            <li>
+                <a href="/busservice/bikes" target="_self">Bikes</a>
+            </li>
+            <li>
+                <a href="/busservice/boeing" target="_self">Going to Boeing</a>
+            </li>
+            <li>
+                <a href="/busservice/bus-to-the-library" target="_self">Bus to the Library</a>
+            </li>
+            <li>
+                <a href="/holidays" target="_self">Holiday Schedule</a>
+            </li>
+            <li>
+                <a href="/busservice/frequentlyaskedquestions" target="_self">Frequently Asked Questions</a>
+            </li>
+            <li>
+                <a href="/busservice/king-county-metro-stops" target="_self">King County Metro Stops</a>
+            </li>
+            <li>
+                <a href="/servicedisruption" target="_self">Seattle-Everett Service Disruption</a>
+            </li>
+
+            </ul>
+        </li>
+        <li>
+            <input id="group-3" type="checkbox" hidden />
+            <label for="group-3" class="hotjar-trigger" data-hotjar-trigger-name="navigation_fares_drop_down"><span class="fa fa-angle-right"></span> Fares</label>
+            <ul class="group-list">
+                            <li>
+                <a href="/fares/fares-and-passes" target="_self">Fares and Passes</a>
+            </li>
+            <li>
+                <a href="/fares/monthlypasses" target="_self">Monthly Passes</a>
+            </li>
+            <li>
+                <a href="/orcalift" target="_self">ORCA LIFT</a>
+            </li>
+            <li>
+                <a href="/dartpassandtickets" target="_self">DART Passes &amp; Tickets</a>
+            </li>
+            <li>
+                <a href="/dartstore" target="_self">DART Store</a>
+            </li>
+            <li>
+                <a href="/fares/smartcard" target="_self">ORCA Smart Card</a>
+            </li>
+            <li>
+                <a href="/orcaoutlets" target="_self">ORCA Outlets</a>
+            </li>
+            <li>
+                <a href="/fares/reduced-fare-permit" target="_self">Reduced Fare Permit</a>
+            </li>
+            <li>
+                <a href="/fares/who-takes-my-pass-or-ticket" target="_self">Who Takes My Pass or Ticket?</a>
+            </li>
+
+            </ul>
+        </li>
+        <li>
+            <input id="group-4" type="checkbox" hidden />
+            <label for="group-4" class="hotjar-trigger" data-hotjar-trigger-name="navigation_vanpool_drop_down"><span class="fa fa-angle-right"></span> Vanpool</label>
+            <ul class="group-list">
+                            <li>
+                <a href="/vanpool/about" target="_self">About Vanpool</a>
+            </li>
+            <li>
+                <a href="/vanpool/find" target="_self">Find a Vanpool to Join</a>
+            </li>
+            <li>
+                <a href="/vanpool/start" target="_self">Start a New Vanpool</a>
+            </li>
+            <li>
+                <a href="/vanpool/resources" target="_self">Current Vanpool Resources</a>
+            </li>
+            <li>
+                <a href="/vanpool/pay-fare" target="_self">Pay Your Vanpool Fare</a>
+            </li>
+
+            </ul>
+        </li>
+        <li>
+            <input id="group-5" type="checkbox" hidden />
+            <label for="group-5" class="hotjar-trigger" data-hotjar-trigger-name="navigation_programs_drop_down"><span class="fa fa-angle-right"></span> Programs</label>
+            <ul class="group-list">
+                            <li>
+                <a href="/programs/commutetripreduction" target="_self">Commute Trip Reduction</a>
+            </li>
+            <li>
+                <a href="/programs/transit-instruction" target="_self">Travel Training Program</a>
+            </li>
+            <li>
+                <a href="/title6" target="_self">Title VI Program</a>
+            </li>
+            <li>
+                <a href="/programs/van-go" target="_self">Van GO</a>
+            </li>
+            <li>
+                <a href="/programs/vanpool-for-business" target="_self">Vanpool for Business</a>
+            </li>
+
+            </ul>
+        </li>
+        <li>
+            <input id="group-6" type="checkbox" hidden />
+            <label for="group-6" class="hotjar-trigger" data-hotjar-trigger-name="navigation_jobs_drop_down"><span class="fa fa-angle-right"></span> Jobs</label>
+            <ul class="group-list">
+                            <li>
+                <a href="/employment/opportunities" target="_self">Employment</a>
+            </li>
+            <li>
+                <input id="sub-group-7" type="checkbox" hidden />
+                <label for="sub-group-7"><span class="fa fa-angle-right"></span> Bus Drivers</label>
+                <ul class="sub-group-list">
+                                <li>
+                <a href="/drive4us/drive-4-us" target="_self">Drive 4 Us</a>
+            </li>
+            <li>
+                <a href="/drive4us/benefits" target="_self">Benefits</a>
+            </li>
+            <li>
+                <a href="/drive4us/interview" target="_self">Interview</a>
+            </li>
+            <li>
+                <a href="/drive4us/getting-a-cdl" target="_self">Getting a CDL</a>
+            </li>
+            <li>
+                <a href="/drive4us/training" target="_self">Training</a>
+            </li>
+            <li>
+                <a href="/drive4us/driving-record" target="_self">Driving Record</a>
+            </li>
+            <li>
+                <a href="/drive4us/applicant-tips-and-faqs" target="_self">Applicant Tips and FAQs</a>
+            </li>
+            <li>
+                <a href="/drive4us/on-the-job" target="_self">On the Job</a>
+            </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="/employment/diesel-mechanics" target="_self">Diesel Mechanics</a>
+            </li>
+            <li>
+                <a href="/employment/jobopportunities" target="_blank">Job Opportunities</a>
+            </li>
+
+            </ul>
+        </li>
+        <li>
+            <input id="group-7" type="checkbox" hidden />
+            <label for="group-7" class="hotjar-trigger" data-hotjar-trigger-name="navigation_about_drop_down"><span class="fa fa-angle-right"></span> About</label>
+            <ul class="group-list">
+                            <li>
+                <input id="sub-group-8" type="checkbox" hidden />
+                <label for="sub-group-8"><span class="fa fa-angle-right"></span> News</label>
+                <ul class="sub-group-list">
+                                <li>
+                <a href="/news/news-releases" target="_self">News Releases</a>
+            </li>
+            <li>
+                <a href="/alert" target="_self">Rider Alerts</a>
+            </li>
+            <li>
+                <a href="/swiftnews" target="_self">Swift Network News</a>
+            </li>
+            <li>
+                <a href="/therouteahead" target="_self">The Route Ahead</a>
+            </li>
+            <li>
+                <a href="/news/events" target="_self">Events</a>
+            </li>
+            <li>
+                <a href="/news/subscribetoalerts" target="_blank">Subscribe</a>
+            </li>
+            <li>
+                <a href="/ctlive" target="_self">Community Transit Live</a>
+            </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="/mission" target="_self">Mission, Vision, Core Values</a>
+            </li>
+            <li>
+                <input id="sub-group-9" type="checkbox" hidden />
+                <label for="sub-group-9"><span class="fa fa-angle-right"></span> Projects</label>
+                <ul class="sub-group-list">
+                                <li>
+                <a href="/TDP" target="_self">Transit Development Plan </a>
+            </li>
+            <li>
+                <a href="/linkconstruction" target="_self">Link Light Rail Construction</a>
+            </li>
+            <li>
+                <a href="/longrangeplan" target="_self">Long Range Plan</a>
+            </li>
+            <li>
+                <a href="/northgate" target="_self">Northgate Link Light Rail Connections</a>
+            </li>
+            <li>
+                <a href="/swiftorange" target="_self">Swift Orange Line</a>
+            </li>
+            <li>
+                <a href="/kpcrSEPA" target="_self">KPCR Renovation SEPA</a>
+            </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="/meetings" target="_self">Meetings</a>
+            </li>
+            <li>
+                <a href="/about/about-us" target="_self">Agency Profile</a>
+            </li>
+            <li>
+                <a href="/budget" target="_self">Budget &amp; Financial Information</a>
+            </li>
+            <li>
+                <a href="/about/directions" target="_self">Directions</a>
+            </li>
+            <li>
+                <a href="/boardofdirectorsceo" target="_self">Board of Directors &amp; CEO</a>
+            </li>
+            <li>
+                <a href="/about/contact-us" target="_self">Contact Us</a>
+            </li>
+            <li>
+                <a href="/about/customer-comments" target="_self">Customer Comments</a>
+            </li>
+            <li>
+                <a href="/about/procurement" target="_self">Procurement</a>
+            </li>
+            <li>
+                <a href="/about/nondiscrimination" target="_self">Nondiscrimination</a>
+            </li>
+            <li>
+                <a href="/environment" target="_self">Environmental Commitment</a>
+            </li>
+            <li>
+                <a href="/commitments" target="_self">Health &amp; Safety Commitments</a>
+            </li>
+
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+
+</div>
+
+    </div>
+</div>
+<div class="row" data-sf-element="Row">
+    <div id="Contentplaceholder1_T45907BB6048_Col00" class="sf_colsIn col-md-12 col-lg-4 hidden-md hidden-sm hidden-xs printHide" data-sf-element="Column 1" data-placeholder-label="Sidebar">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+    <div id="busfinder__container" role="tab"></div>
+    <div class="panel panel-danger sidebarPanel" role="tab">
+        <div class="panel-heading">
+            <a aria-controls="TripPlannerPanel" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#TripPlannerPanel" role="button"></a>
+            <h3 class="panel-title"><a aria-controls="TripPlannerPanel" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#TripPlannerPanel" role="button">Trip Planner</a></h3>
+            <div class="primaryLink pull-right">
+                <a aria-controls="TripPlannerPanel" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#TripPlannerPanel" role="button"></a><a href="/busservice/tripplanner">Go to Main Trip Planner</a>
+            </div>
+        </div>
+        <div aria-labelledby="TripPlannerPanel" class="panel-collapse collapse" id="TripPlannerPanel" role="tabpanel">
+            <div class="panel-body">
+                <form action="/busservice/tripplanner/revise" method="POST">
+                    <div class="form-group">
+                        <label for="OriginSide">Start:</label>
+                        <input class="form-control type-ahead" id="OriginSide" name="Origin" type="text" placeholder="Do not include city/zip." required />
+                    </div>
+                    <div class="form-group">
+                        <label for="DestinationSide">End:</label>
+                        <input class="form-control type-ahead" id="DestinationSide" name="Destination" type="text" placeholder="Do not include city/zip." required />
+                    </div>
+                    <p><strong>Example:</strong> Ash Way P&R, 17525 Hwy 99</p>
+                    <div id="MoreOptionsSide">
+                        <div class="form-group">
+                            <select class="form-control" id="ArrdepSide" name="Arrdep" required>
+                                <option value="D">Departing</option>
+                                <option value="A">Arriving</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="DateSide" name="Date" required>
+                                        <option value="01/27/21"  selected>Today, Wednesday @</option>
+                                        <option value="01/28/21" >Tomorrow, Thursday @</option>
+                                        <option value="01/29/21" >Friday, Jan 29, 2021</option>
+                                        <option value="01/30/21" >Saturday, Jan 30, 2021</option>
+                                        <option value="01/31/21" >Sunday, Jan 31, 2021</option>
+                                        <option value="02/01/21" >Monday, Feb 01, 2021</option>
+                                        <option value="02/02/21" >Tuesday, Feb 02, 2021</option>
+                                        <option value="02/03/21" >Wednesday, Feb 03, 2021</option>
+                                        <option value="02/04/21" >Thursday, Feb 04, 2021</option>
+                                        <option value="02/05/21" >Friday, Feb 05, 2021</option>
+                                        <option value="02/06/21" >Saturday, Feb 06, 2021</option>
+                                        <option value="02/07/21" >Sunday, Feb 07, 2021</option>
+                                        <option value="02/08/21" >Monday, Feb 08, 2021</option>
+                                        <option value="02/09/21" >Tuesday, Feb 09, 2021</option>
+                                        <option value="02/10/21" >Wednesday, Feb 10, 2021</option>
+                                        <option value="02/11/21" >Thursday, Feb 11, 2021</option>
+                                        <option value="02/12/21" >Friday, Feb 12, 2021</option>
+                                        <option value="02/13/21" >Saturday, Feb 13, 2021</option>
+                                        <option value="02/14/21" >Sunday, Feb 14, 2021</option>
+                                        <option value="02/15/21" >Monday, Feb 15, 2021</option>
+                                        <option value="02/16/21" >Tuesday, Feb 16, 2021</option>
+                                        <option value="02/17/21" >Wednesday, Feb 17, 2021</option>
+                                        <option value="02/18/21" >Thursday, Feb 18, 2021</option>
+                                        <option value="02/19/21" >Friday, Feb 19, 2021</option>
+                                        <option value="02/20/21" >Saturday, Feb 20, 2021</option>
+                                        <option value="02/21/21" >Sunday, Feb 21, 2021</option>
+                                        <option value="02/22/21" >Monday, Feb 22, 2021</option>
+                                        <option value="02/23/21" >Tuesday, Feb 23, 2021</option>
+                                        <option value="02/24/21" >Wednesday, Feb 24, 2021</option>
+                                        <option value="02/25/21" >Thursday, Feb 25, 2021</option>
+                                        <option value="02/26/21" >Friday, Feb 26, 2021</option>
+                                        <option value="02/27/21" >Saturday, Feb 27, 2021</option>
+                                        <option value="02/28/21" >Sunday, Feb 28, 2021</option>
+                                        <option value="03/01/21" >Monday, Mar 01, 2021</option>
+                                        <option value="03/02/21" >Tuesday, Mar 02, 2021</option>
+                                        <option value="03/03/21" >Wednesday, Mar 03, 2021</option>
+                                        <option value="03/04/21" >Thursday, Mar 04, 2021</option>
+                                        <option value="03/05/21" >Friday, Mar 05, 2021</option>
+                                        <option value="03/06/21" >Saturday, Mar 06, 2021</option>
+                                        <option value="03/07/21" >Sunday, Mar 07, 2021</option>
+                                        <option value="03/08/21" >Monday, Mar 08, 2021</option>
+                                        <option value="03/09/21" >Tuesday, Mar 09, 2021</option>
+                                        <option value="03/10/21" >Wednesday, Mar 10, 2021</option>
+                                        <option value="03/11/21" >Thursday, Mar 11, 2021</option>
+                                        <option value="03/12/21" >Friday, Mar 12, 2021</option>
+                                        <option value="03/13/21" >Saturday, Mar 13, 2021</option>
+                                        <option value="03/14/21" >Sunday, Mar 14, 2021</option>
+                                        <option value="03/15/21" >Monday, Mar 15, 2021</option>
+                                        <option value="03/16/21" >Tuesday, Mar 16, 2021</option>
+                                        <option value="03/17/21" >Wednesday, Mar 17, 2021</option>
+                                        <option value="03/18/21" >Thursday, Mar 18, 2021</option>
+                                        <option value="03/19/21" >Friday, Mar 19, 2021</option>
+                                        <option value="03/20/21" >Saturday, Mar 20, 2021</option>
+                                        <option value="03/21/21" >Sunday, Mar 21, 2021</option>
+                                        <option value="03/22/21" >Monday, Mar 22, 2021</option>
+                                        <option value="03/23/21" >Tuesday, Mar 23, 2021</option>
+                                        <option value="03/24/21" >Wednesday, Mar 24, 2021</option>
+                                        <option value="03/25/21" >Thursday, Mar 25, 2021</option>
+                                        <option value="03/26/21" >Friday, Mar 26, 2021</option>
+                                        <option value="03/27/21" >Saturday, Mar 27, 2021</option>
+                                        <option value="03/28/21" >Sunday, Mar 28, 2021</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group" id="TripPlannerTimePanel">
+                        </div>
+                        <div class="form-group">
+                            <label for="WalkdistSide">Walking Distance:</label>
+                            <select class="form-control" id="WalkdistSide" name="Walkdist" required>
+                                <option value="0.25">1/4 mile</option>
+                                <option value="0.50">1/2 mile</option>
+                                <option value="0.75">3/4 mile</option>
+                                <option value="1.00" selected>1 mile</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="MinimizeSide">Trip Preference:</label>
+                            <select class="form-control" id="MinimizeSide" name="Minimize" required>
+                                <option value="T">Fastest Way</option>
+                                <option value="X" selected>Fewest Transfers</option>
+                                <option value="W">Minimal Walking</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="AccessibleSide">Accessibility?</label>
+                            <select class="form-control" id="AccessibleSide" name="Accessible" required>
+                                <option value="N">No</option>
+                                <option value="Y">Yes</option>
+                            </select>
+                        </div>
+                        <div class="pull-right">
+                            <input type="submit" class="btn btn-default" value="Plan Trip" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-success sidebarPanel" role="tab">
+        <div class="panel-heading">
+            <a aria-controls="RouteSchedulesPanel" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#RouteSchedulesPanel" role="button"></a>
+            <h3 class="panel-title"><a aria-controls="RouteSchedulesPanel" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#RouteSchedulesPanel" role="button">Route Schedules</a></h3>
+            <div class="primaryLink pull-right">
+                <a aria-controls="RouteSchedulesPanel" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#RouteSchedulesPanel" role="button"></a><a href="/schedules">View All Route Schedules</a>
+            </div>
+        </div>
+        <div aria-labelledby="RouteSchedulesPanel" class="panel-collapse collapse" id="RouteSchedulesPanel" role="tabpanel">
+            <div class="panel-body">
+                <label for="RouteIdSide">Find A Route</label>
+                <select class="form-control" id="RouteIdSide">
+                    <option value="">Select Route</option>
+                            <option value="101">101 - Mariner Park &amp; Ride to Aurora Village</option>
+                            <option value="105">105 - Bothell to Mariner Park &amp; Ride/Hardeson Rd</option>
+                            <option value="106">106 - Mariner Park &amp; Ride to Bothell</option>
+                            <option value="107">107 - Lynnwood Transit Center to Seaway Transit Center</option>
+                            <option value="109">109 - Lake Stevens to Ash Way Park &amp; Ride</option>
+                            <option value="111">111 - Brier to Mountlake Terrace</option>
+                            <option value="112">112 - Mountlake Terrace to Ash Way Park &amp; Ride</option>
+                            <option value="113">113 - Mukilteo to Lynnwood</option>
+                            <option value="115">115 - McCollum Park Park &amp; Ride to Aurora Village</option>
+                            <option value="116">116 - Edmonds to Silver Firs</option>
+                            <option value="119">119 - Ash Way Park &amp; Ride to Mountlake Terrace</option>
+                            <option value="120">120 - Canyon Park to Edmonds College</option>
+                            <option value="130">130 - Edmonds to Lynnwood</option>
+                            <option value="196">196 - Edmonds to Ash Way Park &amp; Ride</option>
+                            <option value="201-202">201/202 - Smokey Point to Lynnwood</option>
+                            <option value="209">209 - Lake Stevens to Smokey Point Transit Center</option>
+                            <option value="220">220 - Arlington to Smokey Point</option>
+                            <option value="222">222 - Marysville to Tulalip</option>
+                            <option value="227">227 - Arlington to Seaway Transit Center</option>
+                            <option value="230">230 - Darrington to Smokey Point</option>
+                            <option value="240">240 - Stanwood to Smokey Point</option>
+                            <option value="247">247 - Stanwood to Seaway Transit Center</option>
+                            <option value="270-271">270/271 - Gold Bar/Monroe to Everett/Seaway Transit Center</option>
+                            <option value="280">280 - Granite Falls/Lake Stevens to Everett/Seaway Transit Center</option>
+                            <option value="402">402 - Lynnwood Transit Center to Downtown Seattle</option>
+                            <option value="405">405 - Edmonds Park &amp; Ride to Downtown Seattle</option>
+                            <option value="410">410 - Mariner Park &amp; Ride to Downtown Seattle</option>
+                            <option value="412">412 - Silver Firs to Downtown Seattle</option>
+                            <option value="413">413 - Swamp Creek Park &amp; Ride to Downtown Seattle</option>
+                            <option value="415">415 - North Lynnwood to Downtown Seattle</option>
+                            <option value="416">416 - Edmonds to Downtown Seattle</option>
+                            <option value="417">417 - Mukilteo to Downtown Seattle</option>
+                            <option value="421">421 - Marysville to Downtown Seattle</option>
+                            <option value="422">422 - Stanwood to Downtown Seattle</option>
+                            <option value="424">424 - Snohomish to Downtown Seattle</option>
+                            <option value="425">425 - Lake Stevens to Downtown Seattle</option>
+                            <option value="435">435 - Mill Creek to Downtown Seattle</option>
+                            <option value="510-512">510/512 - Everett to Downtown Seattle</option>
+                            <option value="511-513">511/513 - Seaway Transit Center/Ash Way Park &amp; Ride to Downtown Seattle</option>
+                            <option value="532-535">532/535 - Everett/Lynnwood to Bellevue</option>
+                            <option value="810">810 - McCollum Park Park &amp; Ride to University District</option>
+                            <option value="821">821 - Marysville to University District</option>
+                            <option value="855">855 - Lynnwood to University District</option>
+                            <option value="860">860 - McCollum Park Park &amp; Ride to University District</option>
+                            <option value="871">871 - Edmonds Park &amp; Ride to University District</option>
+                            <option value="880">880 - Mukilteo to University District</option>
+                            <option value="Swift-Blue-Line">Swift Blue Line - Everett Station to Aurora Village</option>
+                            <option value="Swift-Green-Line">Swift Green Line - Seaway Transit Center to Canyon Park</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-warning sidebarPanel" role="tab">
+        <div class="panel-heading">
+            <a aria-controls="RiderAlertsPanel" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#RiderAlertsPanel" role="button"></a>
+            <h3 class="panel-title"><a aria-controls="RiderAlertsPanel" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#RiderAlertsPanel" role="button">Rider Alerts</a></h3>
+            <div class="primaryLink pull-right">
+                <a aria-controls="RiderAlertsPanel" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#RiderAlertsPanel" role="button"></a><a href="/alerts">View All Rider Alerts</a>
+            </div>
+        </div>
+        <div aria-labelledby="RiderAlertsPanel" class="panel-collapse collapse" id="RiderAlertsPanel" role="tabpanel">
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+    var scheduleAction = '/schedules/route';
+    var typeaheadUrl = 'https://atis.commtrans.org/cgi-bin-soap-2.20.0/nameservice.pl';
+</script>
+
+
+<!-- busfinder search widget support below (as well as the busfinder__container div above) -->
+<script src="https://ctbusfinder.z5.web.core.windows.net/zoid.min.js"></script>
+<script src="https://ctbusfinder.z5.web.core.windows.net/widgets.js"></script>
+<script>
+    window.BusFinder.SearchWidget({
+        env: 'production',
+        picsApiBaseURL: 'https://picsapi.commtrans.org/developer/api/v2/',
+        picsApiKey: '4oJedLBt80WP-d7E6Ekf5w',
+	    busfinderUrl: 'https://www.communitytransit.org/busservice/busfinder',
+	    favoritesUrl: 'https://www.communitytransit.org/busservice/busfinderfavs',
+	    getHeight: window.BusFinder.getHeight,
+        hostClick: window.BusFinder.hostClick,
+        readStore: window.BusFinder.readStore,
+        writeStore: window.BusFinder.writeStore,
+	    gmapsApiKey: 'AIzaSyDs2TorLGzmJCS7wYnt0u0rfr6BQW_5nBg',
+        labels: {
+            'social.title': 'Check out Community Transit realtime bus data'
+        }
+	  }).render('#busfinder__container');
+</script>
+
+
+<!-- ajax updates for non cached content -->
+<script type="text/javascript">
+    (function ($) {
+        $(function () {
+            $.ajax({
+                url: '/rest-api/rider-alerts-content',
+                cache: false,
+                success: function (response) {
+                    if (response) {
+                        var data = response;
+                        $('#RiderAlertsPanel')[0].innerHTML = data;
+                    }
+                    else {
+                        $('#RiderAlertsPanel')[0].innerHTML = "Rider Alerts are not currently available.";
+                    }
+                }
+            });
+        });
+    }(jQuery));
+    (function ($) {
+        $(function () {
+            $.ajax({
+                url: '/rest-api/trip-planner-defaulttime-content',
+                cache: false,
+                success: function (response) {
+                    if (response) {
+                        var data = response;
+                        $('#TripPlannerTimePanel')[0].innerHTML = data;
+                    }
+                }
+            });
+        });
+    }(jQuery));
+</script>
+
+<div >
+    <div class="sf-Long-text" ><a class="nolines" href="/employment/opportunities"><button class="btn btn-primary btn-lg btn-block jobsButton" type="button">Careers at Community Transit</button></a></div>    
+</div>
+<div >
+    <div class="sf-Long-text" ><div class="socialLinks"><ul class="list-inline"><li><a href="https://www.facebook.com/communitytransit" target="_blank" rel="noopener" title="Community Transit Facebook page" aria-label="link to Community Transit’s Facebook page"><em aria-hidden="true" class="fa fa-facebook-official"></em></a> </li><li><a href="https://twitter.com/MyCommTrans" target="_blank" rel="noopener" title="Community Transit Twitter feed" aria-label="link to Community Transit’s Twitter feed"><em aria-hidden="true" class="fa fa-twitter-square"></em></a> </li><li><a href="https://www.youtube.com/user/communitytransit" target="_blank" rel="noopener" title="Community Transit YouTube page" aria-label="link to Community Transit’s YouTube page"><em aria-hidden="true" class="fa fa-youtube-play"></em></a> </li><li><a class="icomoon" href="/blog" target="_blank" title="Community Transit blog" aria-label="link to Community Transit’s blog"><em class="icon-blogger2"></em></a></li><li><a href="https://www.linkedin.com/company/community-transit" target="_blank" rel="noopener" title="Community Transit LinkedIn company profile" aria-label="link to Community Transit’s LinkedIn company profile"><em aria-hidden="true" class="fa fa-linkedin-square"></em></a> </li></ul></div><div class="well"><form action="https://public.govdelivery.com/accounts/WACOMMT/subscribers/qualify" class="form-inline" method="POST" target="_blank"><div class="form-group"><label for="inputEmail">Get Email &amp; Text Alerts <a href="/subscribe">what's this?</a></label>
+ <input class="form-control" id="inputEmail" name="email" placeholder="Email Address" type="email" /><button class="btn btn-default" type="submit">Go</button></div></form></div></div>    
+</div>
+<div >
+    <div class="sf-Long-text" ><div class="text-center"><a href="/about/customer-comments">Customer Care</a><br />M - F, 5:30 a.m. - 8 p.m.<br /><br />(800) 562-1375<br />(425) 353-RIDE (7433)<br />TTY Relay: Dial 711</div></div>    
+</div>
+    </div>
+    <div id="Contentplaceholder1_T45907BB6048_Col01" class="sf_colsIn col-lg-8 col-md-12" data-sf-element="Column 2" data-placeholder-label="Content">
+<div id="Schedules">
+    <h1>Schedules</h1>
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-default ViewType active">
+            <input type="radio" name="ViewType" value="RoutesByCommunity" autocomplete="off" checked> View by Community
+        </label>
+        <label class="btn btn-default ViewType">
+            <input type="radio" name="ViewType" value="RoutesByRoute" autocomplete="off"> View by Route
+        </label>
+    </div>
+    <div class="secondaryRoutes">
+        <ul class="list-inline">
+            <li><a href="/busservice/schedules/stop-list">Stop List</a></li>
+            <li><a href="/busservice/schedules/snowroutes">Snow Routes</a></li>
+        </ul>
+    </div>
+    <hr />
+        <div id="RoutesByCommunity" class="ViewType">
+
+            <ul id="Communities" class="row">
+                    <li class="col-sm-4 col-xs-6"><a href="#arlington">Arlington</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#bellevue">Bellevue</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#bothell">Bothell</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#brier">Brier</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#darrington">Darrington</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#edmonds">Edmonds</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#everett">Everett</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#everett-(boeing)">Everett (Boeing)</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#gold-bar">Gold Bar</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#granite-falls">Granite Falls</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#lake-stevens">Lake Stevens</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#lynnwood">Lynnwood</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#marysville">Marysville</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#mays-pond">Mays Pond</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#mill-creek">Mill Creek</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#monroe">Monroe</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#mountlake-terrace">Mountlake Terrace</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#mukilteo">Mukilteo</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#seattle-(downtown)">Seattle (Downtown)</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#seattle-(u-district)">Seattle (U District)</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#shoreline">Shoreline</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#silver-firs">Silver Firs</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#snohomish">Snohomish</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#stanwood">Stanwood</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#sultan">Sultan</a></li>
+                    <li class="col-sm-4 col-xs-6"><a href="#tulalip-quil-ceda">Tulalip/Quil Ceda</a></li>
+            </ul>
+                <hr id="arlington" />
+                <h3>Arlington</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/201-202">201/202</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Smokey Point to Lynnwood</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/220">220</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Arlington to Smokey Point</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/227">227</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Arlington to Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/230">230</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Darrington to Smokey Point</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/240">240</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Stanwood to Smokey Point</div>
+                    </div>
+                <hr id="bellevue" />
+                <h3>Bellevue</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/532-535" class=text-success>532/535</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett/Lynnwood to Bellevue</div>
+                    </div>
+                <hr id="bothell" />
+                <h3>Bothell</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/105">105</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Bothell to Mariner Park &amp; Ride/Hardeson Rd</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/106">106</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mariner Park &amp; Ride to Bothell</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/120">120</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Canyon Park to Edmonds College</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/435">435</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mill Creek to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/532-535" class=text-success>532/535</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett/Lynnwood to Bellevue</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/Swift-Green-Line">Swift Green Line</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Seaway Transit Center to Canyon Park</div>
+                    </div>
+                <hr id="brier" />
+                <h3>Brier</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/111">111</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Brier to Mountlake Terrace</div>
+                    </div>
+                <hr id="darrington" />
+                <h3>Darrington</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/230">230</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Darrington to Smokey Point</div>
+                    </div>
+                <hr id="edmonds" />
+                <h3>Edmonds</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/101">101</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mariner Park &amp; Ride to Aurora Village</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/115">115</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to Aurora Village</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/116">116</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Silver Firs</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/119">119</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Ash Way Park &amp; Ride to Mountlake Terrace</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/130">130</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Lynnwood</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/196">196</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Ash Way Park &amp; Ride</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/405">405</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/416">416</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/871">871</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds Park &amp; Ride to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/Swift-Blue-Line">Swift Blue Line</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett Station to Aurora Village</div>
+                    </div>
+                <hr id="everett" />
+                <h3>Everett</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/101">101</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mariner Park &amp; Ride to Aurora Village</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/105">105</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Bothell to Mariner Park &amp; Ride/Hardeson Rd</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/106">106</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mariner Park &amp; Ride to Bothell</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/109">109</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Ash Way Park &amp; Ride</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/115">115</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to Aurora Village</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/201-202">201/202</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Smokey Point to Lynnwood</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/270-271">270/271</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Gold Bar/Monroe to Everett/Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/280">280</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Granite Falls/Lake Stevens to Everett/Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/410">410</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mariner Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/412">412</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Silver Firs to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/510-512" class=text-success>510/512</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/511-513" class=text-success>511/513</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Seaway Transit Center/Ash Way Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/532-535" class=text-success>532/535</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett/Lynnwood to Bellevue</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/810">810</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/860">860</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/Swift-Blue-Line">Swift Blue Line</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett Station to Aurora Village</div>
+                    </div>
+                <hr id="everett-(boeing)" />
+                <h3>Everett (Boeing)</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/105">105</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Bothell to Mariner Park &amp; Ride/Hardeson Rd</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/107">107</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lynnwood Transit Center to Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/227">227</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Arlington to Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/247">247</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Stanwood to Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/270-271">270/271</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Gold Bar/Monroe to Everett/Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/280">280</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Granite Falls/Lake Stevens to Everett/Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/Swift-Green-Line">Swift Green Line</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Seaway Transit Center to Canyon Park</div>
+                    </div>
+                <hr id="gold-bar" />
+                <h3>Gold Bar</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/270-271">270/271</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Gold Bar/Monroe to Everett/Seaway Transit Center</div>
+                    </div>
+                <hr id="granite-falls" />
+                <h3>Granite Falls</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/280">280</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Granite Falls/Lake Stevens to Everett/Seaway Transit Center</div>
+                    </div>
+                <hr id="lake-stevens" />
+                <h3>Lake Stevens</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/109">109</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Ash Way Park &amp; Ride</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/209">209</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Smokey Point Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/280">280</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Granite Falls/Lake Stevens to Everett/Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/425">425</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Downtown Seattle</div>
+                    </div>
+                <hr id="lynnwood" />
+                <h3>Lynnwood</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/101">101</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mariner Park &amp; Ride to Aurora Village</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/107">107</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lynnwood Transit Center to Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/109">109</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Ash Way Park &amp; Ride</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/112">112</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mountlake Terrace to Ash Way Park &amp; Ride</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/113">113</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mukilteo to Lynnwood</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/115">115</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to Aurora Village</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/116">116</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Silver Firs</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/119">119</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Ash Way Park &amp; Ride to Mountlake Terrace</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/120">120</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Canyon Park to Edmonds College</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/130">130</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Lynnwood</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/196">196</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Ash Way Park &amp; Ride</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/201-202">201/202</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Smokey Point to Lynnwood</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/402">402</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lynnwood Transit Center to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/413">413</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Swamp Creek Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/415">415</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">North Lynnwood to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/421">421</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Marysville to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/422">422</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Stanwood to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/425">425</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/510-512" class=text-success>510/512</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/511-513" class=text-success>511/513</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Seaway Transit Center/Ash Way Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/532-535" class=text-success>532/535</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett/Lynnwood to Bellevue</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/821">821</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Marysville to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/855">855</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lynnwood to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/Swift-Blue-Line">Swift Blue Line</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett Station to Aurora Village</div>
+                    </div>
+                <hr id="marysville" />
+                <h3>Marysville</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/201-202">201/202</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Smokey Point to Lynnwood</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/209">209</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Smokey Point Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/222">222</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Marysville to Tulalip</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/227">227</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Arlington to Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/247">247</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Stanwood to Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/421">421</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Marysville to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/422">422</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Stanwood to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/821">821</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Marysville to University District</div>
+                    </div>
+                <hr id="mays-pond" />
+                <h3>Mays Pond</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/106">106</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mariner Park &amp; Ride to Bothell</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/Swift-Green-Line">Swift Green Line</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Seaway Transit Center to Canyon Park</div>
+                    </div>
+                <hr id="mill-creek" />
+                <h3>Mill Creek</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/105">105</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Bothell to Mariner Park &amp; Ride/Hardeson Rd</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/106">106</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mariner Park &amp; Ride to Bothell</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/109">109</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Ash Way Park &amp; Ride</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/115">115</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to Aurora Village</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/116">116</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Silver Firs</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/412">412</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Silver Firs to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/435">435</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mill Creek to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/810">810</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/860">860</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/Swift-Green-Line">Swift Green Line</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Seaway Transit Center to Canyon Park</div>
+                    </div>
+                <hr id="monroe" />
+                <h3>Monroe</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/270-271">270/271</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Gold Bar/Monroe to Everett/Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/424">424</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Snohomish to Downtown Seattle</div>
+                    </div>
+                <hr id="mountlake-terrace" />
+                <h3>Mountlake Terrace</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/111">111</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Brier to Mountlake Terrace</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/112">112</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mountlake Terrace to Ash Way Park &amp; Ride</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/119">119</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Ash Way Park &amp; Ride to Mountlake Terrace</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/130">130</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Lynnwood</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/410">410</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mariner Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/413">413</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Swamp Creek Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/415">415</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">North Lynnwood to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/435">435</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mill Creek to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/510-512" class=text-success>510/512</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/511-513" class=text-success>511/513</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Seaway Transit Center/Ash Way Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/810">810</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/871">871</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds Park &amp; Ride to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/880">880</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mukilteo to University District</div>
+                    </div>
+                <hr id="mukilteo" />
+                <h3>Mukilteo</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/113">113</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mukilteo to Lynnwood</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/417">417</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mukilteo to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/880">880</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mukilteo to University District</div>
+                    </div>
+                <hr id="seattle-(downtown)" />
+                <h3>Seattle (Downtown)</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/402">402</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lynnwood Transit Center to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/405">405</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/410">410</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mariner Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/412">412</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Silver Firs to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/413">413</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Swamp Creek Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/415">415</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">North Lynnwood to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/416">416</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/417">417</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mukilteo to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/421">421</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Marysville to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/422">422</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Stanwood to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/424">424</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Snohomish to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/425">425</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/435">435</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mill Creek to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/510-512" class=text-success>510/512</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/511-513" class=text-success>511/513</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Seaway Transit Center/Ash Way Park &amp; Ride to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/810">810</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/821">821</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Marysville to University District</div>
+                    </div>
+                <hr id="seattle-(u-district)" />
+                <h3>Seattle (U District)</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/424">424</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Snohomish to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/510-512" class=text-success>510/512</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/855">855</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lynnwood to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/860">860</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/871">871</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds Park &amp; Ride to University District</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/880">880</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mukilteo to University District</div>
+                    </div>
+                <hr id="shoreline" />
+                <h3>Shoreline</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/101">101</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Mariner Park &amp; Ride to Aurora Village</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/115">115</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">McCollum Park Park &amp; Ride to Aurora Village</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/130">130</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Lynnwood</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/416">416</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Downtown Seattle</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/Swift-Blue-Line">Swift Blue Line</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Everett Station to Aurora Village</div>
+                    </div>
+                <hr id="silver-firs" />
+                <h3>Silver Firs</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/109">109</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Ash Way Park &amp; Ride</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/116">116</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Edmonds to Silver Firs</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/412">412</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Silver Firs to Downtown Seattle</div>
+                    </div>
+                <hr id="snohomish" />
+                <h3>Snohomish</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/109">109</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Ash Way Park &amp; Ride</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/270-271">270/271</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Gold Bar/Monroe to Everett/Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/424">424</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Snohomish to Downtown Seattle</div>
+                    </div>
+                <hr id="stanwood" />
+                <h3>Stanwood</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/240">240</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Stanwood to Smokey Point</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/247">247</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Stanwood to Seaway Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/422">422</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Stanwood to Downtown Seattle</div>
+                    </div>
+                <hr id="sultan" />
+                <h3>Sultan</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/270-271">270/271</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Gold Bar/Monroe to Everett/Seaway Transit Center</div>
+                    </div>
+                <hr id="tulalip-quil-ceda" />
+                <h3>Tulalip/Quil Ceda</h3>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/209">209</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Lake Stevens to Smokey Point Transit Center</div>
+                    </div>
+                    <div class="row Community">
+                        <div class="col-xs-3 text-nowrap">
+                            <strong><a href="/schedules/route/222">222</a></strong>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-1">Marysville to Tulalip</div>
+                    </div>
+            <p><strong>*</strong> denotes a Boeing route</p>
+        </div>
+        <div id="RoutesByRoute" class="ViewType" style="display: none;">
+            <table class="table table-striped">
+                <tr>
+                    <th>Route</th>
+                    <th>Description</th>
+                    <th>View PDF</th>
+                </tr>
+                    <tr>
+                        <td><a href="/schedules/route/101">101</a></td>
+                        <td>Mariner Park &amp; Ride to Aurora Village</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/101.pdf?sfvrsn=45005e77_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/105">105</a></td>
+                        <td>Bothell to Mariner Park &amp; Ride/Hardeson Rd</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/105.pdf?sfvrsn=8408d8e1_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/106">106</a></td>
+                        <td>Mariner Park &amp; Ride to Bothell</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/106.pdf?sfvrsn=127b7a40_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/107">107</a></td>
+                        <td>Lynnwood Transit Center to Seaway Transit Center</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/107.pdf?sfvrsn=49010ea1_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/109">109</a></td>
+                        <td>Lake Stevens to Ash Way Park &amp; Ride</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/109.pdf?sfvrsn=6e55d2cd_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/111">111</a></td>
+                        <td>Brier to Mountlake Terrace</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/111.pdf?sfvrsn=d4df489d_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/112">112</a></td>
+                        <td>Mountlake Terrace to Ash Way Park &amp; Ride</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/112.pdf?sfvrsn=8c237920_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/113">113</a></td>
+                        <td>Mukilteo to Lynnwood</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/113.pdf?sfvrsn=9be9d20e_4">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/115">115</a></td>
+                        <td>McCollum Park Park &amp; Ride to Aurora Village</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/115.pdf?sfvrsn=f4531184_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/116">116</a></td>
+                        <td>Edmonds to Silver Firs</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/116.pdf?sfvrsn=50a6ed59_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/119">119</a></td>
+                        <td>Ash Way Park &amp; Ride to Mountlake Terrace</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/119.pdf?sfvrsn=c2d01d2b_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/120">120</a></td>
+                        <td>Canyon Park to Edmonds College</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/120.pdf?sfvrsn=f52503ee_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/130">130</a></td>
+                        <td>Edmonds to Lynnwood</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/130.pdf?sfvrsn=908ea83e_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/196">196</a></td>
+                        <td>Edmonds to Ash Way Park &amp; Ride</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/196.pdf?sfvrsn=42691648_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/201-202">201/202</a></td>
+                        <td>Smokey Point to Lynnwood</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/201-202.pdf?sfvrsn=73c99751_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/209">209</a></td>
+                        <td>Lake Stevens to Smokey Point Transit Center</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/209.pdf?sfvrsn=90ccf99c_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/220">220</a></td>
+                        <td>Arlington to Smokey Point</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/220.pdf?sfvrsn=ada6ffba_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/222">222</a></td>
+                        <td>Marysville to Tulalip</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/222.pdf?sfvrsn=989e5cd2_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/227">227</a></td>
+                        <td>Arlington to Seaway Transit Center</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/227.pdf?sfvrsn=867df5eb_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/230">230</a></td>
+                        <td>Darrington to Smokey Point</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/230.pdf?sfvrsn=48910b4e_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/240">240</a></td>
+                        <td>Stanwood to Smokey Point</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/240.pdf?sfvrsn=910b5975_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/247">247</a></td>
+                        <td>Stanwood to Seaway Transit Center</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/247.pdf?sfvrsn=254fde7b_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/270-271">270/271</a></td>
+                        <td>Gold Bar/Monroe to Everett/Seaway Transit Center</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/270-271.pdf?sfvrsn=b2e4f257_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/280">280</a></td>
+                        <td>Granite Falls/Lake Stevens to Everett/Seaway Transit Center</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/280.pdf?sfvrsn=53c6281e_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/402">402</a></td>
+                        <td>Lynnwood Transit Center to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/402.pdf?sfvrsn=2c6be7da_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/405">405</a></td>
+                        <td>Edmonds Park &amp; Ride to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/405.pdf?sfvrsn=e658c34d_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/410">410</a></td>
+                        <td>Mariner Park &amp; Ride to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/410.pdf?sfvrsn=192ea7ce_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/412">412</a></td>
+                        <td>Silver Firs to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/412.pdf?sfvrsn=d9102a66_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/413">413</a></td>
+                        <td>Swamp Creek Park &amp; Ride to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/413.pdf?sfvrsn=998a0212_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/415">415</a></td>
+                        <td>North Lynnwood to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/415.pdf?sfvrsn=7a6ea7ea_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/416">416</a></td>
+                        <td>Edmonds to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/416.pdf?sfvrsn=6285be22_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/417">417</a></td>
+                        <td>Mukilteo to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/417.pdf?sfvrsn=b90e6d31_4">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/421">421</a></td>
+                        <td>Marysville to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/421.pdf?sfvrsn=5e96911d_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/422">422</a></td>
+                        <td>Stanwood to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/422.pdf?sfvrsn=8cfee1a7_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/424">424</a></td>
+                        <td>Snohomish to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/424.pdf?sfvrsn=3df965e0_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/425">425</a></td>
+                        <td>Lake Stevens to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/425.pdf?sfvrsn=5bacdcc9_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/435">435</a></td>
+                        <td>Mill Creek to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/435.pdf?sfvrsn=fa61e420_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/510-512" class=text-success>510/512</a></td>
+                        <td>Everett to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/510-512.pdf?sfvrsn=c0798d20_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/511-513" class=text-success>511/513</a></td>
+                        <td>Seaway Transit Center/Ash Way Park &amp; Ride to Downtown Seattle</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/511-513.pdf?sfvrsn=59c9ac92_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/532-535" class=text-success>532/535</a></td>
+                        <td>Everett/Lynnwood to Bellevue</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/532-535.pdf?sfvrsn=809aa735_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/810">810</a></td>
+                        <td>McCollum Park Park &amp; Ride to University District</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/810.pdf?sfvrsn=770a763d_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/821">821</a></td>
+                        <td>Marysville to University District</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/821.pdf?sfvrsn=c805eca8_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/855">855</a></td>
+                        <td>Lynnwood to University District</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/855.pdf?sfvrsn=46ced579_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/860">860</a></td>
+                        <td>McCollum Park Park &amp; Ride to University District</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/860.pdf?sfvrsn=bb895288_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/871">871</a></td>
+                        <td>Edmonds Park &amp; Ride to University District</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/871.pdf?sfvrsn=b0637579_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/880">880</a></td>
+                        <td>Mukilteo to University District</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/880.pdf?sfvrsn=2a4ab938_4">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/Swift-Blue-Line">Swift Blue Line</a></td>
+                        <td>Everett Station to Aurora Village</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/swiftblue.pdf?sfvrsn=6c502d10_2">Download</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="/schedules/route/Swift-Green-Line">Swift Green Line</a></td>
+                        <td>Seaway Transit Center to Canyon Park</td>
+                        <td>
+                                    <a href="https://www.communitytransit.org/docs/default-source/mappdfs/20septmaps/routeschedulepdfs/swiftgreen.pdf?sfvrsn=37d1e00e_2">Download</a>
+
+                        </td>
+                    </tr>
+            </table>
+            <p><strong>*</strong> denotes a Boeing route</p>
+        </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+    var servicePreview = '';
+    var scheduleAction = '/busservice/schedules/route/';
+</script>
+
+    </div>
+</div>
+<div class="row hidden-lg sidebarButtons text-center printHide" data-sf-element="Row">
+    <div id="Contentplaceholder1_T45907BB6079_Col00" class="sf_colsIn col-md-12" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sf-Long-text" ><a class="btn btn-primary btn-lg btn-block tripButton" href="/busservice/busfinder">BusFinder</a> <a class="btn btn-danger btn-lg btn-block" href="/tripplanner">TripPlanner</a> <a class="btn btn-success btn-lg btn-block" href="/schedules">Schedules</a><a class="btn btn-warning btn-lg btn-block" href="/alerts">Alerts</a></div>    
+</div>
+    </div>
+</div>
+
+
+
+<div class="" data-sf-element="Row">
+    <div id="Contentplaceholder1_T45907BB6074_Col00" class="sf_colsIn col-md-12" data-sf-element="Column 1" data-placeholder-label="Column 1">
+
+
+
+
+<script type="text/javascript" src="/ResourcePackages/Bootstrap/assets/dist/js/fastclick.js"></script>
+
+
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+
+
+
+<div >
+    <div class="sf-Long-text" ><footer>
+<hr />
+<ul class="list-inline">
+    <li><a href="/busservice/frequentlyaskedquestions">FAQs</a></li>
+    <li><a href="/about/contact-us">Contact Us</a></li>
+    <li><a href="/opendata">Open Data</a></li>
+    <li><a href="/sitemap">Site Map</a></li>
+</ul>
+<div id="google_translate_element">&nbsp;</div>
+<p>&copy; 2021 Community Transit</p>
+</footer>
+<div class="row">
+<div id="google_translate_element">&nbsp;</div>
+</div></div>    
+</div>
+    </div>
+</div>
+
+</div>
+
+
+ </div> <script src="/Frontend-Assembly/SitefinityWebApp/Mvc/Scripts/SiteAlerts/site_alerts.js?package=Bootstrap&amp;v=MTc0OTY3NjMz" type="text/javascript"></script><script src="/Frontend-Assembly/Telerik.Sitefinity.Frontend.Search/Mvc/Scripts/SearchBox/Search-box.min.js?package=Bootstrap&amp;v=MTIuMi43MjMyLjA%3d" type="text/javascript"></script><script src="/Frontend-Assembly/Telerik.Sitefinity.Frontend.Navigation/assets/dist/js/navigation.js?package=Bootstrap&amp;v=MTc0OTY3NjMz" type="text/javascript"></script><script src="/Frontend-Assembly/SitefinityWebApp/Mvc/Scripts/SidebarAccordion/sidebar_accordion.js?package=Bootstrap&amp;v=MTc0OTY3NjMz" type="text/javascript"></script><script src="/Frontend-Assembly/SitefinityWebApp/Mvc/Scripts/TypeAhead/type_ahead.js?package=Bootstrap&amp;v=MTc0OTY3NjMz" type="text/javascript"></script><script src="/Frontend-Assembly/SitefinityWebApp/Mvc/Scripts/BusFinder/post_message.js?package=Bootstrap&amp;v=MTc0OTY3NjMz" type="text/javascript"></script><script src="/Frontend-Assembly/SitefinityWebApp/Mvc/Scripts/Schedules/schedules.js?package=Bootstrap&amp;v=MTc0OTY3NjMz" type="text/javascript"></script><script src="/Frontend-Assembly/SitefinityWebApp/Mvc/Scripts/TitleTag/title_tag.js?package=Bootstrap&amp;v=MTc0OTY3NjMz" type="text/javascript"></script><script type="text/javascript" src="/ResourcePackages/Bootstrap/assets/dist/js/bootstrap.min.js"></script><script type="text/javascript" src="/ResourcePackages/Bootstrap/assets/dist/js/jasny-bootstrap.min.js"></script><script type="text/javascript" src="/ResourcePackages/Bootstrap/assets/dist/js/jquery.floatThead.js"></script><script type="text/javascript" src="/ResourcePackages/Bootstrap/assets/dist/js/global.js?v=5"></script><script type="text/javascript">
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1736518196653321'); 
+fbq('track', 'PageView');
+</script> </body> </html>
+
