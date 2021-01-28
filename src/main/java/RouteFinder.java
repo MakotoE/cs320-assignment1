@@ -25,7 +25,19 @@ public class RouteFinder implements IRouteFinder {
 
 	@Override
 	public Map<String, LinkedHashMap<Integer, String>> getRouteStops(String url) {
-		return null;
+		final String baseURL = "https://www.communitytransit.org";
+		if (!url.startsWith(baseURL)) {
+			url = baseURL + url;
+		}
+
+		String page = null;
+		try {
+			page = readHTTP(new URL(url));
+		} catch (IOException e) {
+			System.err.println(e.getMessage());
+			System.exit(1);
+		}
+		return routeStops(page);
 	}
 
 	static String readHTTP(URL url) throws IOException {
