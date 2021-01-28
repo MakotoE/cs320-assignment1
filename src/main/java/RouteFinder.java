@@ -42,9 +42,10 @@ public class RouteFinder implements IRouteFinder {
 		}
 	}
 
-	static final Pattern destinationSectionPattern = Pattern.compile("<hr id=\"[^\"]*\" ?/?>");
+	static final Pattern destinationSectionDelimiter = Pattern.compile("<hr id=\"[^\"]*\" ?/?>");
 
 	/**
+	 * @param pageStr HTML of schedules page
 	 * @return All routes, where
 	 * __key: destination
 	 * __value: mapping of routes in destination, where
@@ -69,7 +70,7 @@ public class RouteFinder implements IRouteFinder {
 		</div>
 		 */
 		var scanner = new Scanner(pageStr);
-		scanner.useDelimiter(destinationSectionPattern);
+		scanner.useDelimiter(destinationSectionDelimiter);
 		if (scanner.hasNext()) {
 			scanner.next();
 		}
@@ -98,7 +99,7 @@ public class RouteFinder implements IRouteFinder {
 		return Optional.of(matcher.group());
 	}
 
-	static final Pattern routeDelimiterPattern = Pattern.compile("<div class=\"row Community");
+	static final Pattern routeDelimiter = Pattern.compile("<div class=\"row Community");
 	static final Pattern urlPattern = Pattern.compile("(?<=<strong><a href=\").*?(?=\")");
 	static final Pattern routePattern = Pattern.compile("(?<=>).*?(?=</a>)");
 
@@ -110,7 +111,7 @@ public class RouteFinder implements IRouteFinder {
 		var routes = new HashMap<String, String>();
 
 		var scanner = new Scanner(destinationSection);
-		scanner.useDelimiter(routeDelimiterPattern);
+		scanner.useDelimiter(routeDelimiter);
 
 		while (scanner.hasNext()) {
 			var routeSection = scanner.next();
@@ -124,5 +125,118 @@ public class RouteFinder implements IRouteFinder {
 			}
 		}
 		return routes;
+	}
+
+	static final Pattern routeTableDelimiter = Pattern.compile(
+		"<div id=\".*?\".*?class=\"RouteChart\">");
+
+	/**
+	 * @param pageStr HTML of route page
+	 * @return All weekday stops in given route page, where
+	 * __key: Destination ("To ____")
+	 * __value: Map of stops, where
+	 * ____key: Stop number
+	 * ____value: Address
+	 */
+	static Map<String, LinkedHashMap<Integer, String>> routeStops(String pageStr) {
+		/*
+		<div id="Weekday201-202s" style="" class="RouteChart">
+		  <table class="table table-bordered table-hover">
+			<thead>
+			  <tr>
+				<td colspan="8">
+				  <h2>Weekday<small>To Lynnwood Transit Center</small></h2>
+				</td>
+			  </tr>
+			  <tr>
+				<th class="text-center">Route</th>
+				<th class="text-center">
+				  <span class="fa-stack">
+				    ...
+				    <strong class="fa fa-stack-1x">1</strong>
+				  </span>
+				  <p>Smokey Point Transit Center Bay 1</p>
+				</th>
+				<th class="text-center">
+				  <span class="fa-stack">
+				    ...
+				    <strong class="fa fa-stack-1x">2</strong>
+				  </span>
+				  <p>State Ave &amp; 88th St NE</p>
+				</th>
+			  </tr>
+			</thead>
+		  </table>
+		  ...
+		</div>
+		...
+		<div id="Weekday201-202s" style="" class="RouteChart">
+		  <table class="table table-bordered table-hover">
+			<thead>
+			  <tr>
+				<td colspan="8">
+				  <h2>Saturday<small>To Smokey Point</small></h2>
+		...
+		<div id="Saturday201-202s" style="display:none;" class="RouteChart">
+		  <!-- Saturday schedules start -->
+		 */
+		var result = new HashMap<String, LinkedHashMap<Integer, String>>();
+
+		var scanner = new Scanner(pageStr);
+		scanner.useDelimiter(routeTableDelimiter);
+		if (scanner.hasNext()) {
+			scanner.next();
+		}
+
+		while (scanner.hasNext()) {
+			var routeTable = scanner.next();
+			if (!routeTable.contains("<h2>Weekday")) {
+				break;
+			}
+
+			routeTableDestination(routeTable).ifPresent((destination) -> {
+				result.put(destination, stops(routeTable));
+			});
+		}
+		return result;
+	}
+
+	static final Pattern routeTableDestinationPattern
+		= Pattern.compile("(?<=<h2>Weekday<small>).*?(?=</small></h2>)");
+
+	static Optional<String> routeTableDestination(String routeTable) {
+		var matcher = routeTableDestinationPattern.matcher(routeTable);
+		if (!matcher.find()) {
+			return Optional.empty();
+		}
+
+		return Optional.of(matcher.group());
+	}
+
+	static final Pattern stopDelimiter = Pattern.compile("<th class=\"text-center\">");
+	static final Pattern stopNumberPattern =
+		Pattern.compile("(?<=<strong class=\"fa fa-stack-1x\">).*?(?=</strong>)");
+	static final Pattern stopNamePattern = Pattern.compile("(?<=<p>).*?(?=</p>)");
+
+	static LinkedHashMap<Integer, String> stops(String pageStr) {
+		var stops = new LinkedHashMap<Integer, String>();
+
+		var scanner = new Scanner(pageStr);
+		scanner.useDelimiter(stopDelimiter);
+
+		while (scanner.hasNext()) {
+			var stop = scanner.next();
+			var stopNumberMatcher = stopNumberPattern.matcher(stop);
+			var stopNameMatcher = stopNamePattern.matcher(stop);
+			if (stopNumberMatcher.find() && stopNameMatcher.find()) {
+				try {
+					stops.put(Integer.parseInt(stopNumberMatcher.group()), stopNameMatcher.group());
+				} catch (NumberFormatException ignored) {
+					System.err.println("could not parse stop number: " + stopNumberMatcher.group());
+				}
+			}
+		}
+
+		return stops;
 	}
 }

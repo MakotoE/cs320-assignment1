@@ -85,4 +85,77 @@ public class RouteFinder_test {
 			Assert.assertEquals(expected, result);
 		}
 	}
+
+	public static class routeStops {
+		@Test
+		public void test() throws IOException {
+			Assert.assertTrue(RouteFinder.routeStops("").isEmpty());
+			var pageStr = Files.readString(
+				Path.of("Bus Route 201_202 - Smokey Point to Lynnwood | Community Transit.html")
+			);
+			var result = RouteFinder.routeStops(pageStr);
+			Assert.assertEquals(2, result.size());
+			var toLynnwood = result.get("To Lynnwood Transit Center");
+			Assert.assertEquals(7, toLynnwood.size());
+			Assert.assertEquals("Smokey Point Transit Center Bay 1", toLynnwood.get(1));
+		}
+	}
+
+	public static class routeTableDestination {
+		@Test
+		public void test() {
+			Assert.assertTrue(RouteFinder.routeTableDestination("").isEmpty());
+			var page = """
+				<div id="Weekday201-202s" style="" class="RouteChart">
+					<div class="table-responsive">
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<td colspan="8">
+										<h2>Weekday<small>To Lynnwood Transit Center</small></h2>
+									</td>
+				""";
+			var result = RouteFinder.routeTableDestination(page);
+			Assert.assertEquals(Optional.of("To Lynnwood Transit Center"), result);
+		}
+	}
+
+	public static class stops {
+		@Test
+		public void test() {
+			Assert.assertTrue(RouteFinder.stops("").isEmpty());
+			var page = """
+				<div id="Weekday201-202s" style="" class="RouteChart">
+				<div class="table-responsive">
+					<table class="table table-bordered table-hover">
+						<thead>
+							<tr>
+								<td colspan="8">
+									<h2>Weekday<small>To Lynnwood Transit Center</small></h2>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-center">Route</th>
+								<th class="text-center">
+									 <span class="fa-stack">
+										 <i class="fa fa-circle-thin fa-stack-2x"></i>
+										 <strong class="fa fa-stack-1x">1</strong>
+									 </span>
+									 <p>Smokey Point Transit Center Bay 1</p>
+								 </th>
+								 <th class="text-center">
+									 <span class="fa-stack">
+										 <i class="fa fa-circle-thin fa-stack-2x"></i>
+										 <strong class="fa fa-stack-1x">2</strong>
+									 </span>
+									 <p>State Ave &amp; 88th St NE</p>
+								 </th>
+				""";
+			var expected = new LinkedHashMap<>(Map.of(
+				1, "Smokey Point Transit Center Bay 1",
+				2, "State Ave &amp; 88th St NE"
+			));
+			Assert.assertEquals(expected, RouteFinder.stops(page));
+		}
+	}
 }
