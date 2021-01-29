@@ -7,6 +7,7 @@ import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+// TODO comments
 public class RouteFinder implements IRouteFinder {
 	@Override
 	public Map<String, Map<String, String>> getBusRoutesUrls(char destInitial) {
@@ -14,17 +15,24 @@ public class RouteFinder implements IRouteFinder {
 		try {
 			page = readHTTP(new URL(TRANSIT_WEB_URL));
 		} catch (IOException e) {
-			System.err.println(e.getMessage());
+			e.printStackTrace();
 			System.exit(1);
 		}
 
-		return allRoutes(page).entrySet().stream().filter((entry) -> {
-			return entry.getKey().toLowerCase().startsWith(String.valueOf(destInitial).toLowerCase());
+		return destinationsThatStartWithChar(allRoutes(page), destInitial);
+	}
+
+	static Map<String, Map<String, String>> destinationsThatStartWithChar(
+		HashMap<String, Map<String, String>> destinations,
+		char c
+	) {
+		return destinations.entrySet().stream().filter((entry) -> {
+			return entry.getKey().toLowerCase().startsWith(String.valueOf(c).toLowerCase());
 		}).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 	}
 
 	@Override
-	public Map<String, LinkedHashMap<Integer, String>> getRouteStops(String url) {
+	public Map<String, LinkedHashMap<String, String>> getRouteStops(String url) {
 		final String baseURL = "https://www.communitytransit.org";
 		if (!url.startsWith(baseURL)) {
 			url = baseURL + url;
@@ -34,7 +42,7 @@ public class RouteFinder implements IRouteFinder {
 		try {
 			page = readHTTP(new URL(url));
 		} catch (IOException e) {
-			System.err.println(e.getMessage());
+			e.printStackTrace();
 			System.exit(1);
 		}
 		return routeStops(page);
@@ -48,6 +56,7 @@ public class RouteFinder implements IRouteFinder {
 			StandardCharsets.UTF_8
 		);
 		try (var reader = new BufferedReader(streamReader)) {
+			// TODO replace &; symbols
 			return reader
 				.lines()
 				.collect(Collectors.joining("\n"));
@@ -81,6 +90,7 @@ public class RouteFinder implements IRouteFinder {
 		  ...
 		</div>
 		 */
+		// TODO fuzz test
 		var scanner = new Scanner(pageStr);
 		scanner.useDelimiter(destinationSectionDelimiter);
 		if (scanner.hasNext()) {
@@ -150,7 +160,7 @@ public class RouteFinder implements IRouteFinder {
 	 * ____key: Stop number
 	 * ____value: Address
 	 */
-	static Map<String, LinkedHashMap<Integer, String>> routeStops(String pageStr) {
+	static Map<String, LinkedHashMap<String, String>> routeStops(String pageStr) {
 		/*
 		<div id="Weekday201-202s" style="" class="RouteChart">
 		  <table class="table table-bordered table-hover">
@@ -192,7 +202,7 @@ public class RouteFinder implements IRouteFinder {
 		<div id="Saturday201-202s" style="display:none;" class="RouteChart">
 		  <!-- Saturday schedules start -->
 		 */
-		var result = new HashMap<String, LinkedHashMap<Integer, String>>();
+		var result = new HashMap<String, LinkedHashMap<String, String>>();
 
 		var scanner = new Scanner(pageStr);
 		scanner.useDelimiter(routeTableDelimiter);
@@ -230,8 +240,8 @@ public class RouteFinder implements IRouteFinder {
 		Pattern.compile("(?<=<strong class=\"fa fa-stack-1x\">).*?(?=</strong>)");
 	static final Pattern stopNamePattern = Pattern.compile("(?<=<p>).*?(?=</p>)");
 
-	static LinkedHashMap<Integer, String> stops(String pageStr) {
-		var stops = new LinkedHashMap<Integer, String>();
+	static LinkedHashMap<String, String> stops(String pageStr) {
+		var stops = new LinkedHashMap<String, String>();
 
 		var scanner = new Scanner(pageStr);
 		scanner.useDelimiter(stopDelimiter);
@@ -241,11 +251,7 @@ public class RouteFinder implements IRouteFinder {
 			var stopNumberMatcher = stopNumberPattern.matcher(stop);
 			var stopNameMatcher = stopNamePattern.matcher(stop);
 			if (stopNumberMatcher.find() && stopNameMatcher.find()) {
-				try {
-					stops.put(Integer.parseInt(stopNumberMatcher.group()), stopNameMatcher.group());
-				} catch (NumberFormatException ignored) {
-					System.err.println("could not parse stop number: " + stopNumberMatcher.group());
-				}
+				stops.put(stopNumberMatcher.group(), stopNameMatcher.group());
 			}
 		}
 

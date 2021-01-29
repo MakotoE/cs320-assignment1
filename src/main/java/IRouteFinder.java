@@ -19,8 +19,5 @@ public interface IRouteFinder {
 	 *  and value is the list of stops in the same order that it was parsed on
 	 * (e.g. of a map element <To Mountlake Terrace, <<1, Brier Rd &amp; 228th Pl SW>, <2, 228th St SW &amp; 48th Ave W>, ...>>)
 	 */
-	Map<String, LinkedHashMap<Integer, String>> getRouteStops(final String url);
+	Map<String, LinkedHashMap<String, String>> getRouteStops(final String url);
 }
-
-
-
