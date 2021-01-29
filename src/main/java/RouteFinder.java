@@ -7,7 +7,9 @@ import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-// TODO comments
+/**
+ * Contains bus route data gathering functions.
+ */
 public class RouteFinder implements IRouteFinder {
 	@Override
 	public Map<String, Map<String, String>> getBusRoutesUrls(char destInitial) {
@@ -26,6 +28,9 @@ public class RouteFinder implements IRouteFinder {
 		return destinationsThatStartWithChar(allRoutes(page), destInitial);
 	}
 
+	/**
+	 * Filters by destinations that begin with c (case-insensitive).
+	 */
 	static Map<String, Map<String, String>> destinationsThatStartWithChar(
 		HashMap<String, Map<String, String>> destinations,
 		char c
@@ -50,6 +55,10 @@ public class RouteFinder implements IRouteFinder {
 		return routeStops(page);
 	}
 
+	/**
+	 * Sends GET request to url.
+	 * @return Response body with "&amp;" replaced with "&".
+	 */
 	static String getURLText(URL url) throws IOException {
 		var connection = url.openConnection();
 		connection.setRequestProperty("user-Agent", "Mozilla/5.0");
@@ -77,6 +86,7 @@ public class RouteFinder implements IRouteFinder {
 	 */
 	static HashMap<String, Map<String, String>> allRoutes(String pageStr) {
 		/*
+		<!-- Schedules page example -->
 		<hr id="arlington" />
 		<h3>Arlington</h3>
 		<div class="row Community">
@@ -128,7 +138,7 @@ public class RouteFinder implements IRouteFinder {
 
 	/**
 	 * @param destinationSection Part of page that contains the destination routes
-	 * @return Route IDs to Route URLs
+	 * @return Mapping of route IDs to route URLs
 	 */
 	static HashMap<String, String> destinationRoutes(String destinationSection) {
 		var routes = new HashMap<String, String>();
@@ -163,6 +173,7 @@ public class RouteFinder implements IRouteFinder {
 	 */
 	static Map<String, LinkedHashMap<String, String>> routeStops(String pageStr) {
 		/*
+		<!-- Route page example -->
 		<div id="Weekday201-202s" style="" class="RouteChart">
 		  <table class="table table-bordered table-hover">
 			<thead>
@@ -227,6 +238,10 @@ public class RouteFinder implements IRouteFinder {
 	static final Pattern routeTableDestinationPattern
 		= Pattern.compile("(?<=<h2>Weekday<small>).*?(?=</small></h2>)");
 
+	/**
+	 * @param routeTable A section of the route page containing one route
+	 * @return Name of destination if it exists
+	 */
 	static Optional<String> routeTableDestination(String routeTable) {
 		var matcher = routeTableDestinationPattern.matcher(routeTable);
 		if (!matcher.find()) {
@@ -241,6 +256,10 @@ public class RouteFinder implements IRouteFinder {
 		Pattern.compile("(?<=<strong class=\"fa fa-stack-1x\">).*?(?=</strong>)");
 	static final Pattern stopNamePattern = Pattern.compile("(?<=<p>).*?(?=</p>)");
 
+	/**
+	 * @param pageStr A section of the route page containing one route
+	 * @return Stop number/letter and stop names
+	 */
 	static LinkedHashMap<String, String> stops(String pageStr) {
 		var stops = new LinkedHashMap<String, String>();
 
