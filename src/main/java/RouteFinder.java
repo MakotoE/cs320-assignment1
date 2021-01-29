@@ -56,10 +56,10 @@ public class RouteFinder implements IRouteFinder {
 			StandardCharsets.UTF_8
 		);
 		try (var reader = new BufferedReader(streamReader)) {
-			// TODO replace &; symbols
-			return reader
+			String s = reader
 				.lines()
 				.collect(Collectors.joining("\n"));
+			return s.replaceAll("&amp;", "&");
 		}
 	}
 

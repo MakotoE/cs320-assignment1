@@ -13,6 +13,7 @@ public class Client {
 		var in = new Scanner(System.in);
 		var out = new PrintWriter(System.out);
 
+		// Gets the routes list
 		var destinationsAsync = CompletableFuture.supplyAsync(() -> {
 			try {
 				String page = RouteFinder.readHTTP(new URL(RouteFinder.TRANSIT_WEB_URL));
@@ -46,7 +47,6 @@ public class Client {
 					}
 				}
 			}
-
 
 			for (var destination : destinations.entrySet()) {
 				out.print("Destination: ");
