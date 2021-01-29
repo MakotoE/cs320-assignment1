@@ -9,6 +9,7 @@ public interface IRouteFinder {
 	 * @return key/value map of the routes with key is destination and
 	 *       value is an inner map with a pair of route ID and the route page URL
 	 *       (e.g. of a map element <Brier, <111, https://www.communitytransit.org/busservice/schedules/route/111>>)
+	 * @throws RuntimeException destInitial is not in alphabet
 	 */
 	Map<String, Map<String, String>> getBusRoutesUrls(final char destInitial);
 
@@ -18,6 +19,7 @@ public interface IRouteFinder {
 	 * @return map of the stops grouped by destination with key is the destination (e.g. To Bellevue)
 	 *  and value is the list of stops in the same order that it was parsed on
 	 * (e.g. of a map element <To Mountlake Terrace, <<1, Brier Rd &amp; 228th Pl SW>, <2, 228th St SW &amp; 48th Ave W>, ...>>)
+	 * @throws RuntimeException Request to url returns an error
 	 */
 	Map<String, LinkedHashMap<String, String>> getRouteStops(final String url);
 }

@@ -13,10 +13,14 @@ public class RouteFinder implements IRouteFinder {
 	public Map<String, Map<String, String>> getBusRoutesUrls(char destInitial) {
 		String page = null;
 		try {
-			page = readHTTP(new URL(TRANSIT_WEB_URL));
+			page = getURLText(new URL(TRANSIT_WEB_URL));
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(1);
+		}
+
+		if (!String.valueOf(destInitial).toLowerCase().matches("[a-z]")) {
+			throw new RuntimeException("destInitial is not a letter");
 		}
 
 		return destinationsThatStartWithChar(allRoutes(page), destInitial);
@@ -33,22 +37,20 @@ public class RouteFinder implements IRouteFinder {
 
 	@Override
 	public Map<String, LinkedHashMap<String, String>> getRouteStops(String url) {
-		final String baseURL = "https://www.communitytransit.org";
-		if (!url.startsWith(baseURL)) {
-			url = baseURL + url;
+		if (url.startsWith("/")) {
+			url = "https://www.communitytransit.org" + url;
 		}
 
-		String page = null;
+		String page;
 		try {
-			page = readHTTP(new URL(url));
+			page = getURLText(new URL(url));
 		} catch (IOException e) {
-			e.printStackTrace();
-			System.exit(1);
+			throw new RuntimeException(e);
 		}
 		return routeStops(page);
 	}
 
-	static String readHTTP(URL url) throws IOException {
+	static String getURLText(URL url) throws IOException {
 		var connection = url.openConnection();
 		connection.setRequestProperty("user-Agent", "Mozilla/5.0");
 		var streamReader = new InputStreamReader(
@@ -90,7 +92,6 @@ public class RouteFinder implements IRouteFinder {
 		  ...
 		</div>
 		 */
-		// TODO fuzz test
 		var scanner = new Scanner(pageStr);
 		scanner.useDelimiter(destinationSectionDelimiter);
 		if (scanner.hasNext()) {

@@ -16,7 +16,7 @@ public class Client {
 		// Gets the routes list
 		var destinationsAsync = CompletableFuture.supplyAsync(() -> {
 			try {
-				String page = RouteFinder.readHTTP(new URL(RouteFinder.TRANSIT_WEB_URL));
+				String page = RouteFinder.getURLText(new URL(RouteFinder.TRANSIT_WEB_URL));
 				return RouteFinder.allRoutes(page);
 			} catch (IOException e) {
 				e.printStackTrace();
